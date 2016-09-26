@@ -10,7 +10,6 @@
   width: 100%;
   height: 60px;
   text-align: center;
-  font-family: 'Material Icons';
   font-size: 40px;
   color: #EEEEEE;
   display: block;
@@ -122,6 +121,10 @@
     width: 97%;
   }
   
+  #whiteBar {
+    display: none;
+  }
+
   #progress {
     max-width: 500px;
   }
