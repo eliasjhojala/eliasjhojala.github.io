@@ -77,6 +77,18 @@
   margin-bottom: 80px;
 }
 
+
+/*MATERIAL DESIGN BLOCK*/
+/*#progress .block {
+  min-height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 6px rgb(200, 200, 200);
+  background: white;
+  padding: 40px;
+  border-radius: 1px;
+}*/
+
 #progress h3 { color: #3949AB; }
 
 
