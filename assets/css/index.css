@@ -37,3 +37,89 @@
   margin: 0px auto 0px auto;
   padding: 20px 0px 20px 0px;
 }
+
+#progress {
+  margin-top: 50px;
+}
+
+#progress {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#progress .block {
+  min-height: 200px;
+}
+
+
+#progress .block .imageBg {
+  background: rgb(255,0, 0);
+  display: inline-block;
+  border-radius: 100%;
+}
+  
+#progress .block .imageBg:not(.imageRight) {
+  float: left;
+}
+
+#progress .block .imageBg:not(.imageLeft) {
+  float: right;
+}
+
+#progress .block .text:not(.right) {
+  margin-right: 250px;
+}
+#progress .block .text:not(.left) {
+  margin-left: 250px;
+}
+
+#progress .block .imageBg img {
+  width: 200px;
+  height: 200px;
+}
+
+#progress .block h3 {
+  font-size: 30px;
+}
+
+#progress .block .text {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 24cm) {
+  
+  
+  #siteContent {
+    width: 97%;
+  }
+  
+  #progress .block {
+    min-height: 80px;
+    margin: 0px;
+  }
+  
+  #progress .block .imageBg img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  #progress .block .text:not(.right) {
+    margin-right: 100px;
+  }
+  #progress .block .text:not(.left) {
+    margin-left: 100px;
+  }
+  
+  #progress .block h3 {
+    font-size: 25px;
+  }
+
+  #progress .block .text {
+    font-size: 15px;
+  }
+  
+  
+  
+  
+}
