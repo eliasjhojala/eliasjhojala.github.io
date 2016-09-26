@@ -1,4 +1,28 @@
 @import url("theme.css");
+@import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu";
+
+
+#teaser {
+  
+}
+
+#whiteBar {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-family: 'Material Icons';
+  font-size: 40px;
+  color: #EEEEEE;
+  display: block;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+#whiteBar span {
+  margin-top: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  border: 1px solid #EEEEEE;
+}
 
 #siteContent {
   width: 70%;
@@ -54,9 +78,11 @@
   margin-bottom: 80px;
 }
 
+#progress h3 { color: #3949AB; }
+
 
 #progress .block .imageBg {
-  background: rgb(255,0, 0);
+  background: #3F51B5;
   display: inline-block;
   border-radius: 100%;
 }
