@@ -1,150 +1,39 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu";
+@import url("theme.css");
 
-
-a {
-  color: rgb(50, 80, 150);
-  text-decoration: none;
+#siteContent {
+  width: 70%;
+  margin: 0px auto 0px auto;
+  min-height: 100%;
 }
 
-html {
-  font-family: 'Open Sans';
-  margin: 0px;
+
+#siteContent .contentElement {
+  margin: 30px 0px 30px 0px;
+}
+
+#siteContent .contentElement h2 {
+  font-size: 40px;
   padding: 0px;
-  background: white;
-}
-
-
-
-body {
   margin: 0px;
-  padding: 0px;
-  background-image: url(/assets/media/texture.jpg);
-  overflow-x: hidden;
+  color: var(--main-header-color);
 }
 
-#linkbar {
-  background-color: rgba(229, 2, 28, 0.5);
-  text-align: right;
-  padding: 20px 40px 20px 0px;
-  width: 100%;
-  color: white;
-  float: right;
-  position: fixed;
-  z-index: 2;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-  height: 20px;
+#siteContent .contentElement .content {
+  padding: 10px;
+  color: var(--main-content-color);
 }
 
-#linkBarLinks a {
-  margin-right: 40px;
-  z-index: 2;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
+#bottomBar {
+  background-color: var(--bottom-bar-bg-color);
+  color: var(--bottom-bar-text-color);
 }
 
-
-#title {
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  text-align: left;
-  margin-left: 30px;
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  display: inline-block;
+#bottomBar h2 {
+  padding: 0px; margin: 0px;
 }
 
-#title img {
-  height: 62px;
-}
-
-#menuBox {
-  display: none;
-}
-
-#menuBoxIcon {
-  display: none;
-}
-
-
-@media screen and (max-width: 30cm) {
-  #title {
-    font-size: 24px;
-    margin-left: 15px;
-    margin-top: 3px;
-    box-shadow: 0px;
-  }
-  #title img {
-    height: 35px;
-  }
-  #linkbar a {
-    margin-right: 8px;
-  }
-  #linkbar {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    height: 40px;
-  }
-  
-  body {
-    font-size: 15px;
-  }
-  
-  #linkBarLinks {
-    position: fixed;
-    right: -350px;
-    opacity: 0;
-    transition: right ease-in 500ms, opacity 1ms ease 500ms;
-    top: 40px;
-    background: white;
-    padding: 30px;
-    border-radius: 2px;
-    border-left: 2px solid rgb(150, 150, 150);
-    height: 100%;
-    width: 250px;
-    font-size: 20px;
-    max-width: 50%;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
-    z-index: 10000;
-  }
-  
-  #linkBarLinks a {
-    display: block;
-    text-align: left;
-    padding: 4px 0px;
-    text-decoration: none;
-    color: rgba(26, 66, 119, 1);
-  }
-  
-  #linkbar.open #linkBarLinks {
-    right: 0;
-    opacity: 1;
-    transition: right 400ms, opacity 1ms ease 0ms;
-  }
-  
-  #linkbar:not(.open) .toggle-menubox::before {
-    content: 'menu';
-  }
-  
-  #linkbar.open .toggle-menubox::before {
-    content: 'close';
-  }
-  
-  #menuBoxIcon {
-    display: inline-block;
-    
-    margin-right: 7px;
-    height: 100%;
-  }
-  
-  #menuBoxIcon a {
-    font-size: 28px;
-    text-decoration: none;
-    color: white;
-    z-index:1000;
-    vertical-align: middle;
-    line-height: 40px;
-  }
+#contacts {
+  width: 70%;
+  margin: 0px auto 0px auto;
+  padding: 20px 0px 20px 0px;
 }

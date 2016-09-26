@@ -1,31 +1,68 @@
 <html>
 
   <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/app.js"></script>
     
   </head>
   
   <body>
     <div id="linkbar">
+      
+      <a href="#teaser">
+        <img src="assets/images/logo.png" id="logo">
+      </a>
+      
       <div id="linkBarLinks">
-        <a href="#linkki" class="close-menubox">Linkki</a>
-        <a href="#linkki" class="close-menubox">Linkki</a>
+        <a href="#intro" class="close-menubox">Etusivu</a>
+        <a href="#prosessi" class="close-menubox">Miten</a>
         <a href="#linkki" class="close-menubox">Linkki</a>
       </div>
+      <span id="menuBoxIcon">
+        <a href class="toggle-menubox material-icons"></a>
+      </span>
     </div>
     
     
+    
     <div id="teaser">
+      <div id="blackBar"></div>
       <img src="assets/images/teaser_placeholder.JPG" width="100%">
     </div>
     
     <div id="siteContent">
+      
+      <div class="contentElement" id="intro">
+        <h2>Välipalaa koululle - helposti ja halvalla</h2>
+        <div class="content">
+          Tässä voitaisiin sitten kertoa lyhykäisesti mutta ytimekkäästi koko jutun idea.
+          Miten ja miksi tällainen välipalaautomaatti hankitaan ja ehkä mitä hyötyä siitä on ja toisaalta mitä haasteita.
+          Miksi juuri Snacktimen välipala-automaatti on paras vaihtoehto ja miten sellaisen saa hankittua.
+        </div>
+      </div>
+      
+      
+      <div class="contentElement" id="prosessi">
+        <h2>Näin hankit välipalakoneen koulullesi</h2>
+        <div class="content">
+          Tähän tulee hieno kaavio välipalakoneen hankintaprosessista. Tekeillä vielä.
+        </div>
+      </div>
+      
+      
     </div>
     
-    <div style="height: 300%; width: 100%;"></div>
-    
+    <div id="bottomBar">
+      <div id="contacts">
+        <h2>Yhteystiedot</h2>
+        Yhteystietoja tähän
+      </div>
+    </div>
+
     
   </body>
   
