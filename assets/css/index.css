@@ -50,6 +50,8 @@
 
 #progress .block {
   min-height: 200px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 
@@ -59,18 +61,18 @@
   border-radius: 100%;
 }
   
-#progress .block .imageBg:not(.imageRight) {
+#progress .block:not(.imageRight) .imageBg {
   float: left;
 }
 
-#progress .block .imageBg:not(.imageLeft) {
+#progress .block:not(.imageLeft) .imageBg {
   float: right;
 }
 
-#progress .block .text:not(.right) {
+#progress .block:not(.imageLeft) .text {
   margin-right: 250px;
 }
-#progress .block .text:not(.left) {
+#progress .block:not(.imageRight) .text {
   margin-left: 250px;
 }
 
@@ -94,9 +96,15 @@
     width: 97%;
   }
   
+  #progress {
+    max-width: 500px;
+  }
+  
   #progress .block {
     min-height: 80px;
     margin: 0px;
+    margin-top: 45px;
+    margin-bottom: 45px;
   }
   
   #progress .block .imageBg img {
@@ -104,10 +112,10 @@
     height: 80px;
   }
   
-  #progress .block .text:not(.right) {
+  #progress .block:not(.imageLeft) .text {
     margin-right: 100px;
   }
-  #progress .block .text:not(.left) {
+  #progress .block:not(.imageRight) .text {
     margin-left: 100px;
   }
   
