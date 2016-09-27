@@ -46,7 +46,7 @@
   padding: 10px;
   color: var(--main-content-color);
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 
@@ -85,8 +85,8 @@
 #descAndBen {
   display: flex;
   align-items: center;
-  width: 100%;
   justify-content: center;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   min-width: calc(24cm*0.7);
@@ -187,6 +187,17 @@
 #progress .block h3 {
   font-size: 30px;
 }
+
+#contact .content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contacts a {
+  color: inherit;
+}
+
 
 @media screen and (max-width: 38cm) {
   #siteContent {
