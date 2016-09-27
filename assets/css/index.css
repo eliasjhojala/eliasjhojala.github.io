@@ -46,14 +46,6 @@
   color: var(--main-content-color);
 }
 
-
-.contentElement .content:after {
-   content: " ";
-   display: block;
-   height: 0;
-   clear: both;
-}
-
 #bottomBar {
   background-color: var(--bottom-bar-bg-color);
   color: var(--bottom-bar-text-color);
@@ -69,25 +61,19 @@
   padding: 20px 0px 20px 0px;
 }
 
-#description {
-  display: inline-block;
-  width: 50%;
-  float: left;
-}
-
 #benefits {
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
+  max-width: calc(800px + 10%);
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  float: left;
 }
 
-
-
 #benefits .block {
+  width: 23%;
   display: inline-block;
-  margin: 2%;
+  margin: 3%;
 }
 
 #benefits .block .bg {
@@ -98,11 +84,11 @@
 }
 
 #benefits .block img {
-  width: 80px;
+  width: 100%;
 }
 
 #benefits .block h3 {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 
@@ -185,21 +171,6 @@
   
   #whiteBar {
     display: none;
-  }
-  
-  #description {
-    float: none;
-    width: 100%;
-  }
-  
-  #benefits {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 100%;
-    float: none;
   }
   
   #benefits {
