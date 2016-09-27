@@ -14,10 +14,12 @@ $(function() {
   } else {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes2.mp4" type="video/mp4">');
   }
+
   
   linkBarAlpha.init();
   popup.init();
   menuBox.init();
+
   
   $('video').bind("timeupdate", function() {
     if(this.currentTime >= 11) {
@@ -49,6 +51,7 @@ $(function() {
       $('.black').css('padding-top', '0');
     }
   }
+
   playButtonLocation();
   linkBarFlow();
   $(window).resize(function() {
