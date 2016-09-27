@@ -36,7 +36,7 @@
 
 #siteContent .contentElement h2 {
   text-align: center;
-  font-size: 50px;
+  font-size: 3.5vw;
   padding: 0px;
   margin: 0px;
   color: var(--main-header-color);
@@ -46,6 +46,7 @@
   padding: 10px;
   color: var(--main-content-color);
   margin-top: 15px;
+  font-size: 20px;
 }
 
 
@@ -78,12 +79,13 @@
   margin-bottom: auto;
   float: left;
   padding-right: 20px;
+  border-right: 2px solid #d3d3d3;
 }
 
 #descAndBen {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 100%;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -94,8 +96,9 @@
   text-align: center;
   width: 350px;
   float: left;
-  border-left: 2px solid #d3d3d3;
   flex-shrink: 0;
+  margin-left: -2px;
+  border-left: 2px solid #d3d3d3;
 }
 
 
@@ -122,7 +125,8 @@
 
 
 #progress {
-  margin-top: 50px;
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 #progress {
@@ -133,9 +137,10 @@
 
 #progress .block {
   min-height: 200px;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
 
 
 /*MATERIAL DESIGN BLOCK*/
@@ -183,9 +188,12 @@
   font-size: 30px;
 }
 
-#progress .block .text {
-  font-size: 20px;
+@media screen and (max-width: 38cm) {
+  #siteContent {
+    width: 24cm;
+  }
 }
+
 
 @media screen and (max-width: 24cm) {
   
@@ -195,7 +203,11 @@
   }
   
   #siteContent .contentElement h2 {
-    font-size: 40px;
+      font-size: calc( 20px + 2vw );
+  }
+  
+  #siteContent .contentElement .content {
+    font-size: 15px;
   }
   
   #whiteBar {
@@ -205,18 +217,20 @@
   #descAndBen {
     display: block;
     min-width: 0;
+    width: auto;
   }
   
   #description {
     float: none;
     width: 100%;
+    border: 0;
   }
   
   #benefits {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 43px;
+    margin-top: 20px;
     margin-bottom: 0px;
     width: 100%;
     float: none;
@@ -233,11 +247,16 @@
     width: 25%;
     margin-bottom: 0px;
   }
+  
+  #benefits .block .bg img {
+    width: 100%;
+    max-width: 120px;
+  }
 
 
   
   #benefits .block h3 {
-    font-size: 18px;
+    font-size: calc( 8px + 1.6vw );
     margin-bottom: 0px;
   }
 
@@ -268,13 +287,7 @@
     font-size: 25px;
   }
 
-  #progress .block .text {
-    font-size: 15px;
-  }
-  
-  
-  
-  
+
 }
 
 
