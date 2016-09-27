@@ -224,6 +224,11 @@
     float: none;
     width: 100%;
     border: 0;
+    padding: 0px;
+    display: block;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   #benefits {
@@ -238,19 +243,19 @@
   }
   
   #benefits {
-    max-width: 500px;
+    max-width: 300px;
   }
   
   
   #benefits .block {
-    margin: 4%;
+    margin: 5%;
     width: 25%;
     margin-bottom: 0px;
   }
   
   #benefits .block .bg img {
     width: 100%;
-    max-width: 120px;
+    max-width: 100px;
   }
 
 
