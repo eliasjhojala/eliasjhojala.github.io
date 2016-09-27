@@ -11,16 +11,16 @@
   height: 60px;
   text-align: center;
   font-size: 40px;
-  color: #EEEEEE;
+  color: #d3d3d3;
   display: block;
-  border-bottom: 1px solid #EEEEEE;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 #whiteBar span {
   margin-top: 8px;
   display: inline-block;
   border-radius: 100%;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #d3d3d3
 }
 
 #siteContent {
@@ -95,6 +95,7 @@
 #progress .block .imageBg {
   background: #3F51B5;
   display: inline-block;
+  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.3);
   border-radius: 100%;
 }
   
