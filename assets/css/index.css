@@ -82,6 +82,13 @@
   border-right: 2px solid #d3d3d3;
 }
 
+#moreDescription {
+  margin-top: 20px;
+  width: calc(52% + 350px + 20px + 5px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #descAndBen {
   display: flex;
   align-items: center;
@@ -91,6 +98,24 @@
   margin-right: auto;
   min-width: calc(24cm*0.7);
 }
+
+#moreDescription {
+  /*display: flex;*/
+}
+
+#moreDescription .bg {
+  background: #E91E63;
+  border-radius: 100%;
+  border: 3px solid #EC407A;
+  margin-right: 30px;
+  float: left;
+}
+
+#moreDescription img {
+  width: 200px;
+}
+
+
 
 #benefits {
   text-align: center;
@@ -242,6 +267,13 @@
     margin-right: auto;
   }
   
+  
+  
+  #moreDescription {
+    width: 100%;
+    max-width: 500px;
+  }
+  
   #benefits {
     text-align: center;
     margin-left: auto;
@@ -274,6 +306,14 @@
   #benefits .block h3 {
     font-size: calc( 8px + 1.6vw );
     margin-bottom: 0px;
+  }
+  
+  #moreDescription .bg {
+    margin-right: 20px;
+  }
+  
+  #moreDescription img {
+    width: 80px;
   }
 
   #progress {
