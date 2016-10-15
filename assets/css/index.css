@@ -325,6 +325,11 @@
 
 @media screen and (max-width: 24cm) {
   
+  #popup {
+    width: 90%;
+    height: 85%;
+    margin-top: 80px,
+  }
   
   #siteContent {
     width: 90%;
