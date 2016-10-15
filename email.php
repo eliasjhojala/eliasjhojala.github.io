@@ -1,22 +1,30 @@
 <?php
-$email = $_REQUEST['email'] ; // Haetaan lomakkeesta sähköpostiosoite kenttä
-$message = $_REQUEST['message']; // Haetaan lomakkeesta viesti kenttä
-$mail = new EMail;
-$mail->Server = "localhost";
-$mail->Username = 'lomake@automaattikouluun.fi'; // Webhotelliin luotu sähköpostilaatikko
-$mail->Password = 'automaatti'; // Sähköpostilaatikon salasana
-$mail->SetFrom($email); //Viestin lähettäjän sähköpostiosoite ja nimi.
-$mail->AddTo("elias@snacktime.fi","Elias Ojala"); //Viestin vastaanottajan sähköpostiosoite ja nimi
-$mail->Subject = "Palautelomake"; // Viestin otsikko
-$mail->Message = "$message\n.\n"; // Viestin sisältö. Tässä tapauksessa lomakkeessa ilmoitettu sähköpostiosoite ja viesti.
-//Optional extras
-$mail->ContentType = "text/html"; // Defaults to "text/plain; charset=iso-8859-1"
-//$mail->Headers['X-SomeHeader'] = 'abcde'; // Set some extra headers if required
-echo $success = $mail->Send();
+if($_REQUEST['preventRobot'] == '6') {
+  $email = $_REQUEST['email'] ; // Haetaan lomakkeesta sähköpostiosoite kenttä
+  $message = $_REQUEST['message']; // Haetaan lomakkeesta viesti kenttä
+  $mail = new EMail;
+  $mail->Server = "localhost";
+  $mail->Username = 'lomake@automaattikouluun.fi'; // Webhotelliin luotu sähköpostilaatikko
+  $mail->Password = 'automaatti'; // Sähköpostilaatikon salasana
+  $mail->SetFrom($email); //Viestin lähettäjän sähköpostiosoite ja nimi.
+  $mail->AddTo("elias@snacktime.fi","Elias Ojala"); //Viestin vastaanottajan sähköpostiosoite ja nimi
+  $mail->AddCC('jarkko@snacktime.fi', 'Jarkko Juho');
+  $mail->Subject = "Palautelomake"; // Viestin otsikko
+  $mail->Message = "$message\n.\n"; // Viestin sisältö. Tässä tapauksessa lomakkeessa ilmoitettu sähköpostiosoite ja viesti.
+  //Optional extras
+  $mail->ContentType = "text/html"; // Defaults to "text/plain; charset=iso-8859-1"
+  //$mail->Headers['X-SomeHeader'] = 'abcde'; // Set some extra headers if required
 
-if($success) {
-  header("Location: /email.html");
-  die();
+
+  echo $success = $mail->Send();
+
+  if($success) {
+    header("Location: /email.html");
+    die();
+  }
+}
+else {
+  echo "<p style='font-family: Open Sans;'>Virhe robotin estossa. <a href='/email.html'>Palaa takaisin.</a></p>";
 }
 
 
