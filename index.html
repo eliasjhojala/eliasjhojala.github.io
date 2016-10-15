@@ -74,14 +74,36 @@
           
           </div>
           <div id="moreDescription">
-            <div id="profit">
-              <div class="bg"><img src="assets/images/profit.png"></div>
+            <div class="block">
+              <div class="text" id="profitText">
+                <div id="profit">
+                  <div class="bg"><img src="assets/images/profit.png"></div>
+                </div>
+                Laitteen saa <b>pääkaupunkiseudulla</b> kouluihin ilmaiseksi. Tämän lisäksi oppilaskunnalle maksettaan
+                provisio laitteen myynnin mukaan. Eli mitä enemmän laitetta käytettään sitä enemmän
+                oppilaskunta tienaa. Alueet jonne voimme toimittaa ilmaisen automaatin näet <a href="">tästä</a>
+              </div>
             </div>
-            <div class="text">
-              Laitteen saa <b>pääkaupunkiseudun</b> kouluihin ilmaiseksi ja tämän lisäksi oppilaskunta saa <b>voittoa</b> laitteesta.<br><br>
-              <b>Muualla</b> asuville taas on tarjolla laitteen vuokrasopimus kolmeksi vuodeksi, jolloin oppilaskunta maksaa kaikki kustannukset,
-              mutta saa myös kaiken voiton itselleen.
+            
+            <div class="block">
+              <div class="text" id="mapText">
+                <div id="map">
+                  <div class="bg"><img src="assets/images/finland.png"></div>
+                </div>
+                Muualla asuville meillä on hyviä uutisia!! Voimme tarjota automaatin vuokrasopimuksella mille
+                paikkakunnalle tahansa. Vuokraaja (yleensä oppilaskunta) maksaa laitteesta vain vuokraan ja saa
+                kaiken myyntituoton itselle. Vuokraajalle sisältyy vastuu täyttää ja huoltaa laite itse. Annamme teille
+                täyden koulutuksen ja tuen laitteen käytössä. Kysy lisää
+
+                <a class="open-popup" href
+                  data-popup-url="contactForm.html"
+                  data-title="Yhteydenotto">
+                  tästä
+                </a>
+                
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -148,7 +170,9 @@
               
               <div class="text">
                 <h3>4. Nimet paperiin</h3>
-                Tehdään sopimus välipala-automaatista, jonka jälkeen snacktime asentaa automaatin paikoilleen ja koko koulu voi nauttia välipaloista.
+                Tehdään kirjallinen sopimus välipala-automaatista, jonka
+                jälkeen Snacktime asentaa automaatin paikoilleen ja
+                koko koulu voi alkaa nauttia terveellisistä välipaloista.
               </div>
               
               
@@ -186,6 +210,16 @@
         <a href="mailto:elias@snacktime.fi">elias@snacktime.fi</a><br>
         050 574 7762
       </div>
+    </div>
+    
+    
+    <div id="popupBackground" class="close-popup"></div>
+    <div id="popup">
+      <h3 class="title">
+        <span id="popup-title"></span>
+        <a class="close-popup material-icons" href>close</a>
+      </h3>
+      <div id="popupContent"></div>
     </div>
 
     
