@@ -320,16 +320,21 @@
   #siteContent {
     width: 24cm;
   }
-}
-
-
-@media screen and (max-width: 24cm) {
+  
   
   #popup {
     width: 90%;
     height: 85%;
-    margin-top: 80px,
+    max-height: 500px;
+    margin-top: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
+}
+
+
+@media screen and (max-width: 24cm) {
+
   
   #siteContent {
     width: 90%;
