@@ -1,43 +1,13 @@
-<meta charset="UTF-8">
-<style>
-  input, textarea {
-    display: block;
-    font-family: 'Open Sans';
-    color: #282828;
-    height: 2em;
-    font-size: 18px;
-    padding: 4px;
-    margin: 4px 0;
-    width: 30em;
-    max-width: 100%;
-    border: 1px solid #c8c8c8;
-    border-radius: 3px;
-    transition-duration: 150ms;
-    outline: none;
-    box-sizing: border-box;
-  }
-  textarea {
-    height: 100px;
-  }
-  input[type="submit"] {
-    padding: 4px;
-    background: white;
-    box-shadow: 0px 0px 6px rgba(black, 0.15);
-  }
-
-  input[type="submit"]:hover, input[type="submit"]:focus {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  input[type="submit"]:active {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); inset;
-    border-color: rgba(255, 100, 100, 0.5);
-  }
-</style>
-<form method="post" action="email.php">
-<input name="email" id="email" type="text" placeholder="Sähköpostisi">
-<input name="name" id="name" type="text" placeholder="Nimesi">
-<textarea name="message" id="message" placeholder="Viestisi" rows="15" cols="40"></textarea>
-<input name="preventRobot" id="preventRobot" placeholder="2 + 4? (varmistus ettet ole robotti)">
-<input type="submit" value="Submit">
-</form>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/form.css">
+</head>
+<body>
+  <form method="post" action="email.php">
+  <input name="email" id="email" type="text" placeholder="Sähköpostisi">
+  <input name="name" id="name" type="text" placeholder="Nimesi">
+  <textarea name="message" id="message" placeholder="Viestisi" rows="15" cols="40"></textarea>
+  <input name="preventRobot" id="preventRobot" placeholder="2 + 4? (varmistus ettet ole robotti)">
+  <input type="submit" value="Submit">
+  </form>
+</body>
