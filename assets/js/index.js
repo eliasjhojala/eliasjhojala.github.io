@@ -6,6 +6,31 @@ function smallDisplay() {
   return $(window).width() < 888;
 }
 
+var contactFormButtonSize = 20;
+var contactFormButtonFinalSize = 20;
+var contactFormButtonPaddingDirection = 0;
+
+function myMove() {
+  var contactFormButtonFinalSize = (150-Math.sin(contactFormButtonSize/100)*100) / 10;
+  if(contactFormButtonSize < 20) {
+    contactFormButtonPaddingDirection = 1;
+  }
+  else if(contactFormButtonSize > 150) {
+    contactFormButtonPaddingDirection = 0;
+  }
+  if(contactFormButtonPaddingDirection == 1) {
+    contactFormButtonSize+=0.5;
+  }
+  else if(contactFormButtonPaddingDirection == 0) {
+    contactFormButtonSize-=0.5;
+  }
+  $('.contactFormButton').css("padding", String(contactFormButtonFinalSize + 17));
+  $('.contactFormButton').css("margin", String(-contactFormButtonFinalSize + 17));
+  $('.contactFormButton').css("margin-left", String(-contactFormButtonFinalSize + 5));
+}
+
+  setInterval(myMove, 1);
+
 $(function() {
   if ($(window).width() > 800) {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser.mp4" type="video/mp4">');
@@ -15,10 +40,10 @@ $(function() {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes2.mp4" type="video/mp4">');
   }
 
-  
   linkBarAlpha.init();
   popup.init();
   menuBox.init();
+
 
   
   $('video').bind("timeupdate", function() {

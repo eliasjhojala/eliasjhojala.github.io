@@ -259,6 +259,16 @@
   color: inherit;
 }
 
+.contactFormButton {
+  background: #3F51B5;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  float: right;
+  display: inline-block;
+  margin-top: 17px;
+}
+
 
 #popup {
   position: fixed;
@@ -333,8 +343,25 @@
 }
 
 
+.mobile {
+  display: none;
+}
+
 @media screen and (max-width: 24cm) {
 
+
+.contactFormButton {
+  float: none;
+  margin-left: -3px;
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: inline-block;
+}
   
   #siteContent {
     width: 90%;
