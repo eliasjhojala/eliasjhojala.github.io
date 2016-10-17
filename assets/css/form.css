@@ -11,7 +11,7 @@ input, textarea {
   max-width: 100%;
   border: 1px solid #c8c8c8;
   border-radius: 3px;
-  transition-duration: 150ms;
+  transition: box-shadow 150ms ease;
   outline: none;
   box-sizing: border-box;
   -webkit-appearance: none;
