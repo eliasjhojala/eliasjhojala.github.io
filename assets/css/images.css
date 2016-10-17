@@ -1,0 +1,30 @@
+#images {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+}
+
+#images h3 {
+  font-size: 25px;
+  color: var(--theme-color-red);
+}
+
+#images .imageBlock {
+  width: 45%;
+  margin: 20px;
+}
+
+#images .imageBlock img {
+  width: 100%;
+  -webkit-filter: grayscale(30%) opacity(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(40%) opacity(100%);
+  transition-duration: 350ms;
+}
+
+#images .imageBlock img:hover {
+  -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+  filter: grayscale(0%);
+}
