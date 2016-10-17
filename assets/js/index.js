@@ -29,7 +29,7 @@ function myMove() {
   $('.contactFormButton').css("margin-left", String(-contactFormButtonFinalSize + 5));
 }
 
-  setInterval(myMove, 1);
+  // setInterval(myMove, 1);
 
 $(function() {
   if ($(window).width() > 800) {
