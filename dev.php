@@ -113,7 +113,7 @@
       
       
       <div class="contentElement" id="images">
-
+        <?php include 'images.php' ?>
       </div>
       
       
