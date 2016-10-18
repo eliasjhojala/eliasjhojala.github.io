@@ -8,7 +8,7 @@ if($_REQUEST['preventRobot'] == '6') {
   $mail->Password = 'automaatti'; // Sähköpostilaatikon salasana
   $mail->SetFrom($email); //Viestin lähettäjän sähköpostiosoite ja nimi.
   $mail->AddTo("elias@snacktime.fi","Elias Ojala"); //Viestin vastaanottajan sähköpostiosoite ja nimi
-  $mail->AddCC('jarkko@snacktime.fi', 'Jarkko Juho');
+  $mail->AddCC("jarkko@snacktime.fi", "Jarkko Juho");
   $mail->Subject = "Palautelomake"; // Viestin otsikko
   $mail->Message = "$message\n.\n"; // Viestin sisältö. Tässä tapauksessa lomakkeessa ilmoitettu sähköpostiosoite ja viesti.
   //Optional extras
