@@ -2,8 +2,8 @@
 
   $numberOfImages = 2;
   $images = array(
-    array("otsikko1", "/assets/images/teaser_placeholder", "teksti"),
-    array("otsikko2", "/assets/images/teaser_placeholder", "teksti")
+    array("Automaatti käytävällä", "/assets/images/laitekuvia/1.jpeg", "Automaatti on pieni ja sopii hyvin moneen paikkaan"),
+    array("Valintanäppäimistö", "/assets/images/laitekuvia/2.jpeg", "Automaatissa on helpot valintanäppäimet")
   );
 
 ?>

@@ -1,18 +1,42 @@
 <html>
 
   <head>
+    <title>Snacktime</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" type="text/css" href="assets/css/app.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <link rel="stylesheet" type="text/css" href="assets/css/form.css">
     <link rel="stylesheet" type="text/css" href="assets/css/images.css">
     <link rel="stylesheet" type="text/css" href="assets/css/imagePopup.css">
+    
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="assets/js/app.js"></script>
     
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-startup-image" href="assets/images/logo.png">
+    
+    <link rel="apple-touch-icon" href="touch-icon-60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-152.png">
+    <link rel="apple-touch-icon" sizes="250x250" href="touch-icon-250.png">
+    
     <base target="_blank">
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86297425-1', 'auto');
+      ga('require', 'linkid');
+      ga('send', 'pageview');
+
+    </script>
     
   </head>
   
@@ -24,7 +48,7 @@
       </a>
       
       <div id="linkBarLinks">
-        <a href="#intro" class="close-menubox">Etusivu</a>
+        <a id="introLink" onClick=”ga('send', 'event', 'navbar', 'Intro', '2');” href="#intro" class="close-menubox">Etusivu</a>
         <a href="#prosessi" class="close-menubox">Miten</a>
         <a href="#contact" class="close-menubox">Ota yhteyttä</a>
       </div>
@@ -38,7 +62,7 @@
     <div id="teaser">
       <div id="blackBar"></div>
       <div class="videoWrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wItPWYRCRqI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bm7LyfGE-tI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
     <a id="whiteBar"  class="material-icons" href="#intro"><span>keyboard_arrow_down</span></a>
@@ -219,7 +243,7 @@
         </a>
         
         <h2 style="font-size: 28px; margin-bottom: 5px;">Yhteystiedot</h2>
-        <a href="mailto:elias@snacktime.fi">elias@snacktime.fi</a><br>
+        <a onClick=”ga('send', 'event', 'bottombar', 'email', '2');” href="mailto:elias@snacktime.fi">elias@snacktime.fi</a><br>
         050 574 7762
         <div class="mobile" id="beforeContactFormButton"></div>
         <a style="font-size: 20px;" class="contactFormButton open-popup mobile" href
