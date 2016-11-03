@@ -62,7 +62,7 @@
     <div id="teaser">
       <div id="blackBar"></div>
       <div class="videoWrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bm7LyfGE-tI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1kLrc8al60Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
     <a id="whiteBar"  class="material-icons" href="#intro"><span>keyboard_arrow_down</span></a>
