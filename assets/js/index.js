@@ -2,6 +2,8 @@ var linkBarAlpha;
 var popup;
 var menuBox;
 
+
+
 function smallDisplay() {
   return $(window).width() < 888;
 }

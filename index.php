@@ -35,7 +35,16 @@
       ga('create', 'UA-86297425-1', 'auto');
       ga('require', 'linkid');
       ga('send', 'pageview');
+      
+    
 
+    </script>
+    
+    <script>
+      function track(eventClass, eventAction) {
+        ga('send', 'event', String(eventClass), String(eventAction));
+      }
+      
     </script>
     
   </head>
@@ -43,14 +52,14 @@
   <body>
     <div id="linkbar">
       
-      <a href="#teaser">
+      <a onClick="track('Menubar', 'Logo');" href="#teaser">
         <img src="assets/images/logo.png" id="logo">
       </a>
       
       <div id="linkBarLinks">
-        <a id="introLink" onClick=”ga('send', 'event', 'navbar', 'Intro', '2');” href="#intro" class="close-menubox">Etusivu</a>
-        <a href="#prosessi" class="close-menubox">Miten</a>
-        <a href="#contact" class="close-menubox">Ota yhteyttä</a>
+        <a href="#intro" onClick="track('Menubar', 'Etusivu');" class="close-menubox">Etusivu</a>
+        <a href="#prosessi" onClick="track('Menubar', 'Miten');" class="close-menubox">Miten</a>
+        <a href="#contact" onClick="track('Menubar', 'Ota yhteyttä');" class="close-menubox">Ota yhteyttä</a>
       </div>
       <span id="menuBoxIcon">
         <a href class="toggle-menubox material-icons"></a>
@@ -58,14 +67,8 @@
     </div>
     
     
+    <?php include 'teaser.php?url=https://www.youtube.com/embed/1kLrc8al60Y?rel=0&amp;showinfo=0'; ?>
     
-    <div id="teaser">
-      <div id="blackBar"></div>
-      <div class="videoWrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1kLrc8al60Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-    <a id="whiteBar"  class="material-icons" href="#intro"><span>keyboard_arrow_down</span></a>
     
     <div id="siteContent">
       
@@ -236,17 +239,17 @@
     
     <div id="bottomBar">
       <div id="contacts">
-        <a style="font-size: 20px;" class="contactFormButton open-popup desktop"  href
+        <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton open-popup desktop"  href
           data-popup-url="contactForm.html"
           data-title="Yhteydenotto">
           Ota yhteyttä
         </a>
         
         <h2 style="font-size: 28px; margin-bottom: 5px;">Yhteystiedot</h2>
-        <a onClick=”ga('send', 'event', 'bottombar', 'email', '2');” href="mailto:elias@snacktime.fi">elias@snacktime.fi</a><br>
+        <a onClick="track('BottomBar', 'Mail: Elias');" href="mailto:elias@snacktime.fi">elias@snacktime.fi</a><br>
         050 574 7762
         <div class="mobile" id="beforeContactFormButton"></div>
-        <a style="font-size: 20px;" class="contactFormButton open-popup mobile" href
+        <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton open-popup mobile" href
           data-popup-url="contactForm.html"
           data-title="Yhteydenotto">
           Ota yhteyttä
@@ -256,14 +259,7 @@
     </div>
     
     
-    <div id="popupBackground" class="close-popup"></div>
-    <div id="popup">
-      <h3 class="title">
-        <span id="popup-title"></span>
-        <a class="close-popup material-icons" href>close</a>
-      </h3>
-      <div id="popupContent"></div>
-    </div>
+    <?php include 'popup.php'; ?>
 
     
   </body>
