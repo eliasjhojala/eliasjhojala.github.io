@@ -67,7 +67,10 @@
     </div>
     
     
-    <?php include 'teaser.php?url=https://www.youtube.com/embed/1kLrc8al60Y?rel=0&amp;showinfo=0'; ?>
+    <?php
+      $teaserUrl = "https://www.youtube.com/embed/1kLrc8al60Y?rel=0&amp;showinfo=0";
+      include 'teaser.php';
+    ?>
     
     
     <div id="siteContent">
