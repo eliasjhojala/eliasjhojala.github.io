@@ -34,13 +34,14 @@
             <div id="profit">
               <div class="bg"><img src="assets/images/profit.png"></div>
             </div>
-            Laitteen saa <b>pääkaupunkiseudulla</b> kouluihin ilmaiseksi. Tämän lisäksi oppilaskunnalle maksettaan
+            Laitteen saa kouluihin ilmaiseksi. Tämän lisäksi oppilaskunnalle maksettaan
             provisio laitteen myynnin mukaan. Eli mitä enemmän laitetta käytettään sitä enemmän
-            oppilaskunta tienaa. Alueet jonne voimme toimittaa ilmaisen automaatin näet <a href="assets/files/suomenkartta.pdf">tästä</a>
+            oppilaskunta tienaa. SnackTime hoitaa myös laitteen huollon ja täytön täysin ilmaiseksi.
+             <!-- Alueet jonne voimme toimittaa ilmaisen automaatin näet <a href="assets/files/suomenkartta.pdf">tästä</a> -->
           </div>
         </div>
         
-        <div class="block">
+        <!-- <div class="block">
           <div class="text" id="mapText">
             <div id="map">
               <div class="bg"><img src="assets/images/finland.png"></div>
@@ -57,7 +58,7 @@
             </a>
             
           </div>
-        </div>
+        </div> -->
         
       </div>
     </div>
@@ -95,11 +96,11 @@
             <img src="assets/images/progress_icons/list.png">
           </div>
           
-          <div class="text">
+          <div class="text" id="tuotteet">
             <h3>2. Tuotteiden valinta</h3>
             Räätälöidään juuri tarpeisiinne sopiva kahdentoista tuotteen tuotepaketti valmiiksi.
             Valikoimasta löytyy paljon terveellisiä pieniä välipaloja, joita voit valita.
-           Tuote-esitteen löydät <a href="assets/files/esite.pdf">täältä</a>.
+           <b>Tuote-esitteen löydät <a href="assets/files/esite.pdf">täältä</a></b>.
           </div>
           
           

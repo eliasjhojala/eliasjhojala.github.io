@@ -34,10 +34,13 @@
 
         <figure class="imageBlock" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <a href="<?php echo $image; ?>" itemprop="contentUrl" data-size="<?php echo $imgSize; ?>">
-              <img src="<?php echo $image; ?>" itemprop="thumbnail" alt="Image description" />
+              <img src="<?php echo $image; ?>" itemprop="thumbnail" alt="Image description" /> <br>
+              <span style="padding: 2px; padding-top: 6px; color: black;"><?php echo substr($description, 0, 20); ?>...</span>
           </a>
           <figcaption itemprop="caption description"><?php echo $description; ?></figcaption>
         </figure>
+        
+        
 
     <?php } ?>
     

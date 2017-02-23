@@ -13,6 +13,8 @@
   <head>
     <?php include 'head.php'; ?>
     
+    <meta charset="UTF-8">
+    
     <link rel='stylesheet prefetch' href='PhotoSwipe/css/photoswipe.css'>
     <link rel='stylesheet prefetch' href='PhotoSwipe/default-skin/default-skin.css'>
 
