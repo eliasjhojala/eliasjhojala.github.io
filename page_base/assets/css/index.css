@@ -268,6 +268,8 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 15px;
+  border: 4px solid white;
 }
 
 #contacts a {
@@ -289,9 +291,49 @@
   box-shadow: 0px 5px 22px rgba(0, 0, 0, 0.30);
 }
 
+.activateContactForm {
+  -webkit-animation-name: activateContactForm; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  animation-name: activateContactForm;
+  animation-duration: 3s;
+}
+
+/*
+@-webkit-keyframes activateContactForm {
+  0%   {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
+  40%  {box-shadow: 0px 0px 20px #3F51B5, 0px 0px 20px #3F51B5 inset;}
+  100%  {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
+}
+
+@keyframes activateContactForm {
+  0%   {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
+  40%  {box-shadow: 0px 0px 20px #3F51B5, 0px 0px 20px #3F51B5 inset;}
+  100%  {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
+}
+
+*/
+
+@-webkit-keyframes activateContactForm {
+  0%   {border: 4px solid white; }
+  40%  {border: 4px solid #3F51B5;}
+  100%  {border: 4px solid white;}
+}
+
+@keyframes activateContactForm {
+  0%   {border: 4px solid white; }
+  40%  {border: 4px solid #3F51B5;}
+  100%  {border: 4px solid white;}
+}
+
+
+
 #bullets {
   font-size: 30px;
-  margin-bottom: 100px !important;
+  margin-bottom: 60px !important;
+}
+
+#mainTextBox {
+  margin-bottom: 70px !important;
 }
 
 
@@ -492,13 +534,14 @@
 
   #references {
     max-width: 500px;
+    margin-top: -5px;
   }
   
   #references .block {
     min-height: 80px;
     margin: 0px;
-    margin-top: 45px;
-    margin-bottom: 45px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   #references .block .imageBg img {

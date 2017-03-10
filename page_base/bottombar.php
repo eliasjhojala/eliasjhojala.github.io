@@ -1,8 +1,6 @@
 <div id="bottomBar">
   <div id="contacts">
-    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton open-popup desktop"  href
-      data-popup-url="contactForm.html"
-      data-title="Yhteydenotto">
+    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton desktop" href>
       Ota yhteyttä
     </a>
     
@@ -10,9 +8,7 @@
     <a onClick="track('BottomBar', 'Mail: Elias');" href="mailto:elias@snacktime.fi">elias@snacktime.fi</a><br>
     050 574 7762
     <div class="mobile" id="beforeContactFormButton"></div>
-    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton open-popup mobile" href
-      data-popup-url="contactForm.html"
-      data-title="Yhteydenotto">
+    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton mobile" href="#contact">
       Ota yhteyttä
     </a>
     

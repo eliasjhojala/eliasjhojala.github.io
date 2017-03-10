@@ -47,6 +47,14 @@ $(function() {
   menuBox.init();
 
 
+  $('.contactFormButton').on('click', function(e) {
+    e.preventDefault();
+    $('#contact .content').addClass('activateContactForm');
+    setTimeout(function () {
+      $('#contact .content').removeClass('activateContactForm');
+    }, 4000);
+  });
+
   
   $('video').bind("timeupdate", function() {
     if(this.currentTime >= 11) {

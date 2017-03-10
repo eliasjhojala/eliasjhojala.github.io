@@ -7,6 +7,7 @@
   );
   
   $teaserUrl = "assets/images/placeHolder.JPG";
+  $hideWhiteBar = true;
 ?>
 
 <html>

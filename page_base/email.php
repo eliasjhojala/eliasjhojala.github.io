@@ -19,12 +19,12 @@ if($_REQUEST['preventRobot'] == '6') {
   echo $success = $mail->Send();
 
   if($success) {
-    header("Location: /email.html");
+    header("Location: index.php");
     die();
   }
 }
 else {
-  echo "<p style='font-family: Open Sans;'>Virhe robotin estossa. <a href='/email.html'>Palaa takaisin.</a></p>";
+  echo "<p style='font-family: Open Sans;'>Virhe robotin estossa. <a href='index.php'>Palaa takaisin.</a></p>";
 }
 
 

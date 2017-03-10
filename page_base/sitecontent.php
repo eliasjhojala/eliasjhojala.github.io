@@ -32,7 +32,23 @@
   </div>
   
   
-  <div class="contentElement" id="prosessi">
+  <div class="contentElement" id="mainTextBox">
+    <h2>Otsikko</h2>
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Praesent at justo posuere, aliquam felis id, sodales odio.
+      Aliquam luctus erat sem. Proin varius faucibus felis, quis laoreet arcu posuere eu.
+      Praesent ut tincidunt libero, sit amet facilisis risus. Curabitur non elit at tortor ornare pretium quis nec lectus.
+      Integer et consequat ex. Pellentesque eleifend leo lacus, ac pulvinar turpis lobortis non.
+      Phasellus viverra leo vel enim fringilla auctor. Vivamus ac massa posuere, suscipit eros in, venenatis justo. Sed eu aliquam neque.
+       Aenean auctor, diam eu tempor placerat, elit purus egestas odio, nec tincidunt dui dolor eu lorem.
+      Duis interdum convallis ullamcorper.
+      Fusce ultrices pharetra leo et blandit. Nunc quis mi odio. Nam non porta ligula.
+    </div>
+  </div>
+  
+  
+  <div class="contentElement" id="referenssit">
     <h2>Referenssit</h2>
     <div class="content">
       <div id="references">
