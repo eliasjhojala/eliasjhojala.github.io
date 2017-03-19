@@ -1,12 +1,50 @@
+<?php
+
+  $bulletList = "
+  a
+  b
+  c
+  ";
+  
+  $shortDescriptionSubject = "otsikko";
+  
+  $shortDescription = "
+  lorem ipsum
+  ";
+  
+  $longContentSubject = "Otsikko";
+  
+  $longContent = "
+  lorem ipsum dolor sit amet
+  ";
+  
+    
+  $referenceTextList = "
+  Lorem ipsum;
+  Dolor sit amet
+  ";
+  
+  $referenceImageList = "
+  assets/images/placeHolder_2.JPG
+  assets/images/placeHolder_2.JPG
+  ";
+
+
+  $referenceTexts = preg_split(";", $referenceTextList);
+  $referenceImages = preg_split("/\\r\\n|\\r|\\n/", $referenceImageList);
+  $bullets = preg_split("/\\r\\n|\\r|\\n/", $bulletList);
+      
+?>
+
+
 <div id="siteContent">
   
   <div class="contentElement" id="intro">
-    <h2>Lorem ipsum dolor</h2>
+    <h2><?php echo $shortDescriptionSubject; ?></h2>
     <div class="content">
       <div id="descAndBen">
         <div id="description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec sed purus commodo, finibus justo i
+          <?php echo $shortDescription; ?>
         </div>
       </div>
 
@@ -23,27 +61,19 @@
   <div class="contentElement">
     <div id="bullets">
       <ul>
-        <li>Lorem ipsum</li>
-        <li>dolor sit amet</li>
-        <li>consectetur adipiscing</li>
-        <li>Donec sed purus</li>
+        <?php
+          foreach ($bullets as $bullet)
+            if($bullet != "") { echo"<li>".$bullet."</li>"; }
+         ?>
       </ul>
     </div>
   </div>
   
   
   <div class="contentElement" id="mainTextBox">
-    <h2>Otsikko</h2>
+    <h2><?php echo $longContentSubject; ?></h2>
     <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Praesent at justo posuere, aliquam felis id, sodales odio.
-      Aliquam luctus erat sem. Proin varius faucibus felis, quis laoreet arcu posuere eu.
-      Praesent ut tincidunt libero, sit amet facilisis risus. Curabitur non elit at tortor ornare pretium quis nec lectus.
-      Integer et consequat ex. Pellentesque eleifend leo lacus, ac pulvinar turpis lobortis non.
-      Phasellus viverra leo vel enim fringilla auctor. Vivamus ac massa posuere, suscipit eros in, venenatis justo. Sed eu aliquam neque.
-       Aenean auctor, diam eu tempor placerat, elit purus egestas odio, nec tincidunt dui dolor eu lorem.
-      Duis interdum convallis ullamcorper.
-      Fusce ultrices pharetra leo et blandit. Nunc quis mi odio. Nam non porta ligula.
+      <?php echo $longContent; ?>
     </div>
   </div>
   
@@ -52,12 +82,38 @@
     <h2>Referenssit</h2>
     <div class="content">
       <div id="references">
+        
+        <!-- <?php
+          for ($i = 0; $i < sizeof($referenceTextList); $i++) {
+            $referenceText = $referenceTextList[$i];
+            $referenceImage = $referenceImageList[$i];
+            if($referenceText != "") {
+            ?>
+            
+              <div class="block imageLeft">
+                <div class="imageBg">
+                  <img src="<?php echo $referenceImage; ?>">
+                </div>
+                <div class="text">
+                  <?php echo $referenceText; ?>
+                </div>
+              </div>
+            
+            
+            <?php
+            
+            }
+          }
+          
+        ?> -->
+        
+        
         <div class="block imageLeft">
           <div class="imageBg">
             <img src="assets/images/placeHolder_2.JPG">
           </div>
           <div class="text">
-            Lorem ipsum dolor sit amet
+            Lorem ipsum
           </div>
         </div>
         
@@ -66,7 +122,7 @@
             <img src="assets/images/placeHolder_2.JPG">
           </div>
           <div class="text" id="tuotteet">
-            Lorem ipsum dolor sit amet
+            Dolor sit amet
           </div>
         </div>
       </div>
