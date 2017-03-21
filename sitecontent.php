@@ -100,7 +100,7 @@
             <h3>2. Tuotteiden valinta</h3>
             Räätälöidään juuri tarpeisiinne sopiva kahdentoista tuotteen tuotepaketti valmiiksi.
             Valikoimasta löytyy paljon terveellisiä pieniä välipaloja, joita voit valita.
-           <b>Tuote-esitteen löydät <a href="assets/files/esite.pdf">täältä</a></b>.
+           <b>Tuote-esitteen löydät <a onClick="track('Content', 'Tuote-esite (linkki)');" href="assets/files/esite.pdf">täältä</a></b>.
           </div>
           
           

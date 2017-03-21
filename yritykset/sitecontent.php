@@ -19,7 +19,7 @@
   Varsinkin silloin kun henkilökuntaa ei ole saatavissa.
   ";
   
-  $longContentSubject = "Otsikko";
+  $longContentSubject = "Vuokra-automaatti, miksi?";
   
   $longContent = "
   Snacktime on tuonut markkinoille uuden mullistavan myyntiautomaatin. Automaatti on suunniteltu suoraan yrityksille,
