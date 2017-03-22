@@ -25,13 +25,13 @@
   ";
   
   $referenceImageList = "
-  assets/images/placeHolder_2.JPG
+  assets/images/placeHolder_2.JPG;
   assets/images/placeHolder_2.JPG
   ";
 
 
-  $referenceTexts = preg_split(";", $referenceTextList);
-  $referenceImages = preg_split("/\\r\\n|\\r|\\n/", $referenceImageList);
+  $referenceTexts = explode(";\n", $referenceTextList);
+  $referenceImages = explode(";\n", $referenceImageList);
   $bullets = preg_split("/\\r\\n|\\r|\\n/", $bulletList);
       
 ?>
@@ -83,52 +83,24 @@
     <div class="content">
       <div id="references">
         
-        <!-- <?php
-          for ($i = 0; $i < sizeof($referenceTextList); $i++) {
-            $referenceText = $referenceTextList[$i];
-            $referenceImage = $referenceImageList[$i];
-            if($referenceText != "") {
-            ?>
-            
-              <div class="block imageLeft">
-                <div class="imageBg">
-                  <img src="<?php echo $referenceImage; ?>">
-                </div>
-                <div class="text">
-                  <?php echo $referenceText; ?>
-                </div>
+        <?php
+          for ($i = 0; $i < sizeof($referenceTexts); $i++) {
+            $txt = $referenceTexts[$i];
+            $img = $referenceImages[$i];
+        ?>
+            <div class="block imageLeft">
+              <div class="imageBg"><img src="<?php echo $img; ?>"></div>
+              <div class="text"><?php echo $txt; ?>
               </div>
-            
-            
-            <?php
-            
-            }
+            </div>
+        <?php
           }
-          
-        ?> -->
-        
-        
-        <div class="block imageLeft">
-          <div class="imageBg">
-            <img src="assets/images/placeHolder_2.JPG">
-          </div>
-          <div class="text">
-            Lorem ipsum
-          </div>
-        </div>
-        
-        <div class="block imageLeft">
-          <div class="imageBg">
-            <img src="assets/images/placeHolder_2.JPG">
-          </div>
-          <div class="text" id="tuotteet">
-            Dolor sit amet
-          </div>
-        </div>
+        ?>
+
       </div>
     </div>
   </div>
-  
+
   
   <div class="contentElement" id="contact">
     <h2>Ota yhteyttä</h2>
