@@ -5,7 +5,7 @@
     array("bullets", "Miksi"),
     array("contact", "Haluan laitteen")
   );
-  
+
   $teaserUrl = "assets/images/placeHolder.JPG";
   $hideWhiteBar = true;
 ?>
@@ -23,7 +23,8 @@
       include 'sitecontent.php'; //Sisältö muuttuu erityisesti tässä!
       include 'bottombar.php'; //Tää pysyy aika samana
       include 'popup.php'; //Ei tarvitse muuttaa
+      include 'PhotoSwipe/end.php'
     ?>
   </body>
-  
+
 </html>

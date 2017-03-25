@@ -10,25 +10,25 @@
   b
   c
   ";
-  
+
   $shortDescriptionSubject = "otsikko";
-  
+
   $shortDescription = "
   lorem ipsum
   ";
-  
+
   $longContentSubject = "Otsikko";
-  
+
   $longContent = "
   lorem ipsum dolor sit amet
   ";
-  
-    
+
+
   $referenceTextList = "
   Lorem ipsum;
   Dolor sit amet
   ";
-  
+
   $referenceImageList = "
   assets/images/placeHolder_2.JPG;
   assets/images/placeHolder_2.JPG
@@ -39,12 +39,12 @@
   $referenceImages = explode(";\n", $referenceImageList);
   $images = explode("\n", $imageList);
   $bullets = preg_split("/\\r\\n|\\r|\\n/", $bulletList);
-      
+
 ?>
 
 
 <div id="siteContent">
-  
+
   <div class="contentElement" id="intro">
     <h2><?php echo $shortDescriptionSubject; ?></h2>
     <div class="content">
@@ -56,16 +56,16 @@
 
     </div>
   </div>
-  
-  
+
+
   <div class="contentElement" id="imagesElement">
     <?php
       foreach ($images as $image)
         if($image != "") { echo "<img src='".$image."'>"; }
      ?>
   </div>
-  
-  
+
+
   <div class="contentElement">
     <div id="bullets">
       <ul>
@@ -76,21 +76,21 @@
       </ul>
     </div>
   </div>
-  
-  
+
+
   <div class="contentElement" id="mainTextBox">
     <h2><?php echo $longContentSubject; ?></h2>
     <div class="content">
       <?php echo $longContent; ?>
     </div>
   </div>
-  
-  
+
+
   <div class="contentElement" id="referenssit">
     <h2>Referenssit</h2>
     <div class="content">
       <div id="references">
-        
+
         <?php
           for ($i = 0; $i < sizeof($referenceTexts); $i++) {
             $txt = $referenceTexts[$i];
@@ -109,12 +109,12 @@
     </div>
   </div>
 
-  
+
   <div class="contentElement" id="contact">
     <h2>Ota yhteyttä</h2>
     <div class="content">
       <?php include 'email.html' ?>
     </div>
   </div>
-  
+
 </div>

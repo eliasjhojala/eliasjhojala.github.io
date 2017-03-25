@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 <link rel="stylesheet" type="text/css" href="assets/css/form.css">
 <link rel="stylesheet" type="text/css" href="assets/css/images.css">
-<link rel="stylesheet" type="text/css" href="assets/css/imagePopup.css">
+<link rel='stylesheet prefetch' href='PhotoSwipe/photoSwipe.css'>
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/index.js"></script>
