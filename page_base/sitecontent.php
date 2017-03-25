@@ -1,5 +1,10 @@
 <?php
 
+  $imageList = "
+  assets/images/placeHolder_2.JPG
+  assets/images/placeHolder_2.JPG
+  ";
+
   $bulletList = "
   a
   b
@@ -32,6 +37,7 @@
 
   $referenceTexts = explode(";\n", $referenceTextList);
   $referenceImages = explode(";\n", $referenceImageList);
+  $images = explode("\n", $imageList);
   $bullets = preg_split("/\\r\\n|\\r|\\n/", $bulletList);
       
 ?>
@@ -53,8 +59,10 @@
   
   
   <div class="contentElement" id="imagesElement">
-    <img src="assets/images/placeHolder_2.JPG">
-    <img src="assets/images/placeHolder_2.JPG">
+    <?php
+      foreach ($images as $image)
+        if($image != "") { echo "<img src='".$image."'>"; }
+     ?>
   </div>
   
   

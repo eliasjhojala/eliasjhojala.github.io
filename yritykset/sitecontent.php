@@ -1,5 +1,10 @@
 <?php
 
+  $imageList = "
+  assets/images/placeHolder_2.JPG
+  assets/images/placeHolder_2.JPG
+  ";
+
   $bulletList = "
   Pienikokoinen, 66x180x23 (LxKxS cm)
   Hyväksyy kaikki eurokolikot, 5snt - 2€
@@ -63,6 +68,7 @@
 
   $referenceTexts = explode(";\n", $referenceTextList);
   $referenceImages = explode(";\n", $referenceImageList);
+  $images = explode("\n", $imageList);
   $bullets = explode("\n", $bulletList);
       
 ?>
@@ -84,8 +90,10 @@
   
   
   <div class="contentElement" id="imagesElement">
-    <img src="assets/images/placeHolder_2.JPG">
-    <img src="assets/images/placeHolder_2.JPG">
+    <?php
+      foreach ($images as $image)
+        if($image != "") { echo "<img src='".$image."'>"; }
+     ?>
   </div>
   
   

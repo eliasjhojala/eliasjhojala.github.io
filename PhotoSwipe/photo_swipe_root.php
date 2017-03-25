@@ -46,3 +46,7 @@
     </div>
       
   </div>
+  
+  <script src='js/photoswipe.js'></script>
+  <script src='js/photoswipe-ui-default.js'></script>
+  <script src="js/index.js"></script>
