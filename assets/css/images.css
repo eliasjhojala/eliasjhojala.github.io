@@ -45,7 +45,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   #images .imageBlock h3 {
     font-size: 20px;
     margin: 0px;
@@ -53,11 +53,11 @@
     margin-top: 5px;
     display: none;
   }
-  
+
   #images .imageBlock .imageText {
     display: none;
   }
-  
+
   #images .imageBlock img {
     box-shadow: 0.3px 0.3px 1.5px rgba(0, 0, 0, 0.2);
     border-radius: 1px;
@@ -66,13 +66,14 @@
   #images .imageBlock img:hover {
     box-shadow: 0.3px 0.3px 2px rgba(0, 0, 0, 0.2);
   }
-  
+
 }
 
 #images .imageBlock img {
   width: 100%;
   -webkit-filter: grayscale(30%) opacity(90%) brightness(110%); /* Chrome, Safari, Opera */
   filter: grayscale(30%) opacity(90%) brightness(110%);
+  -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
 }
 
