@@ -87,14 +87,7 @@
 
     </div>
   </div>
-
-  <div class="contentElement">
-
-
-  <?php showImages("assets/images/automaatti_kuva.png"); ?>
-
-</div>
-
+  
 
   <div class="contentElement" id="imagesElement">
     <?php
