@@ -1,6 +1,6 @@
 <div id="images" class="my-gallery">
      <?php
-        $dirname = $externalPath . "media/";
+        $dirname = "../media/";
         $images = glob($dirname."*.jpg");
 
         foreach($images as $image) {

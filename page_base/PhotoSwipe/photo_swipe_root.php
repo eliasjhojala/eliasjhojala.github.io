@@ -13,7 +13,7 @@
 
       <div class="pswp__ui pswp__ui--hidden">
         <div class="pswp__top-bar">
-          
+
           <div class="pswp__counter"></div>
           <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
           <button class="pswp__button pswp__button--share" title="Share"></button>
@@ -27,7 +27,7 @@
               </div>
             </div>
           </div>
-            
+
         </div>
 
         <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
@@ -44,5 +44,9 @@
       </div>
 
     </div>
-      
+
   </div>
+
+  <script src='<?php echo $photoSwipePath ?>js/photoswipe.js'></script>
+  <script src='<?php echo $photoSwipePath ?>js/photoswipe-ui-default.js'></script>
+  <script src="<?php echo $photoSwipePath ?>js/index.js"></script>

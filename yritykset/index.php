@@ -1,4 +1,5 @@
 <?php
+  $photoSwipePath = "PhotoSwipe/";
   $menuBarLinks = array (
     array("intro", "Etusivu"),
     array("imagesElement", "Laite"),
@@ -13,7 +14,10 @@
 <html>
 
   <head>
-    <?php include 'head.php'; ?>
+    <?php
+      include 'head.php';
+      include $photoSwipePath.'begin.php';
+    ?>
   </head>
 
   <body>
@@ -23,8 +27,7 @@
       include 'sitecontent.php'; //Sisältö muuttuu erityisesti tässä!
       include 'bottombar.php'; //Tää pysyy aika samana
       include 'popup.php'; //Ei tarvitse muuttaa
-      include 'PhotoSwipe/end.php'
     ?>
   </body>
-
+  <?php include $photoSwipePath.'end.php' ?>
 </html>

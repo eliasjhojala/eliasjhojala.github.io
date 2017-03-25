@@ -4,7 +4,6 @@
         $images = glob($dirname."*.jpg");
 
         foreach($images as $image) {
-          echo "toimii";
           showImage($image);
        }
      ?>
