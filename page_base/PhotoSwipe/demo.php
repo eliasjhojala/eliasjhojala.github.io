@@ -7,16 +7,14 @@
 
   <body>
 
-    <div id="images" class="my-gallery">
+    <div id="images">
 
      <?php
 
         $dirname = "../media/";
         $images = glob($dirname."*.jpg");
 
-        foreach($images as $image) {
-          showImage($image);
-       }
+        showImages($images);
      ?>
 
 

@@ -88,10 +88,10 @@
     </div>
   </div>
 
-  <div class="contentElement my-gallery">
+  <div class="contentElement">
 
 
-  <?php showImage("assets/images/automaatti_kuva.png"); ?>
+  <?php showImages("assets/images/automaatti_kuva.png"); ?>
 
 </div>
 

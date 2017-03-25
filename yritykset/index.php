@@ -14,20 +14,18 @@
 <html>
 
   <head>
-    <?php
-      include 'head.php';
-      include $photoSwipePath.'begin.php';
-    ?>
+    <?php include 'head.php'; ?>
   </head>
 
   <body>
     <?php
+      include $photoSwipePath.'begin.php';
       include 'linkbar.php'; //Vähän content edittii
       include 'teaser.php'; //Vähän content edittii
       include 'sitecontent.php'; //Sisältö muuttuu erityisesti tässä!
       include 'bottombar.php'; //Tää pysyy aika samana
       include 'popup.php'; //Ei tarvitse muuttaa
+      include $photoSwipePath.'end.php';
     ?>
   </body>
-  <?php include $photoSwipePath.'end.php' ?>
 </html>

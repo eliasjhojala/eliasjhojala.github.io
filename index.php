@@ -18,11 +18,13 @@
 
   <body>
     <?php
+      include $photoSwipePath.'begin.php';
       include 'linkbar.php';
       include 'teaser.php';
       include 'sitecontent.php';
       include 'bottombar.php';
       include 'popup.php';
+      include $photoSwipePath.'end.php';
     ?>
   </body>
 

@@ -11,20 +11,18 @@
 <html>
 
   <head>
-    <?php
-      include 'head.php';
-      include $photoSwipePath.'begin.php';
-    ?>
+    <?php include 'head.php'; ?>
   </head>
 
   <body>
     <?php
+      include $photoSwipePath.'begin.php';
       include 'linkbar.php';
       include 'teaser.php';
       include 'DEVsitecontent.php';
       include 'bottombar.php';
       include 'popup.php';
+      include $photoSwipePath.'end.php';
     ?>
   </body>
-  <?php include $photoSwipePath.'end.php' ?>
 </html>
