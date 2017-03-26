@@ -57,10 +57,16 @@ $referenceTextList = "
 Laitteen vuokraaminen on vapauttanut resursseja varsinaiseen myyntityöhön.
 Vuokralaitepaikka, yritys x, Pertti Kettunen, yrittäjä.;
 Asiakkaamme saavat lisäarvoa kun automaatti hoitaa iltamyynnin, joten jotain ostettavaa on aina tarjolla.
-Vuokralaitepaikka, yritys y, Tiina Titityy, esimies.
+Vuokralaitepaikka, yritys y, Tiina Titityy, esimies.;
+Laitteen vuokraaminen on vapauttanut resursseja varsinaiseen myyntityöhön.
+Vuokralaitepaikka, yritys x, Pertti Kettunen, yrittäjä.;
+Laitteen vuokraaminen on vapauttanut resursseja varsinaiseen myyntityöhön.
+Vuokralaitepaikka, yritys x, Pertti Kettunen, yrittäjä.
 ";
 
 $referenceImageList = "
+assets/images/placeHolder_2.JPG;
+assets/images/placeHolder_2.JPG;
 assets/images/placeHolder_2.JPG;
 assets/images/placeHolder_2.JPG
 ";
@@ -126,7 +132,7 @@ $bullets = explode("\n", $bulletList);
   <div class="contentElement" id="referenssit">
     <h2>Referenssit</h2>
     <div class="content">
-      <div id="references">
+      <div id="references" class="my-gallery">
 
         <?php
           for ($i = 0; $i < sizeof($referenceTexts); $i++) {
@@ -134,12 +140,7 @@ $bullets = explode("\n", $bulletList);
             $img = $referenceImages[$i];
         ?>
 
-
-            <div class="block imageLeft">
-              <img src="<?php echo $img; ?>">
-              <div class="text"><?php echo $txt; ?>
-              </div>
-            </div>
+            <?php showImage($img, $txt); ?>
         <?php
           }
         ?>

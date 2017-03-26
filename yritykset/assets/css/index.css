@@ -40,7 +40,7 @@
 }
 
 #siteContent {
-  width: 70%;
+  width: 75%;
   margin: 0px auto 0px auto;
   min-height: 100%;
 }
@@ -210,14 +210,12 @@
 
 
 #references {
-  margin-top: -20px;
-  margin-bottom: -20px;
-}
-
-#references {
-  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+	margin-top: -20px;
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #references .block {
@@ -257,13 +255,31 @@
   margin-left: 250px;
 }
 
-#references .block img {
-  width: 200px;
-  height: 200px;
+#references figure {
+	margin-left: 0px;
+	margin-right: 0px;
+	max-width: 49%;
 }
 
-#references .block h3 {
-  font-size: 30px;
+#references figure img {
+  width: 200px;
+  height: 200px;
+	float: left;
+}
+
+#references figure .desc {
+  font-size: 18px;
+	margin-left: 220px;
+	padding-top: 0px;
+	margin-top: 0px;
+	word-wrap: break-word;
+}
+
+#references figure:after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 #contact .content {
@@ -300,21 +316,6 @@
   animation-duration: 3s;
 }
 
-/*
-@-webkit-keyframes activateContactForm {
-  0%   {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
-  40%  {box-shadow: 0px 0px 20px #3F51B5, 0px 0px 20px #3F51B5 inset;}
-  100%  {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
-}
-
-@keyframes activateContactForm {
-  0%   {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
-  40%  {box-shadow: 0px 0px 20px #3F51B5, 0px 0px 20px #3F51B5 inset;}
-  100%  {box-shadow: 0px 0px 20px white, 0px 0px 20px white inset;}
-}
-
-*/
-
 @-webkit-keyframes activateContactForm {
   0%   {border: 4px solid white; }
   40%  {border: 4px solid #3F51B5;}
@@ -337,7 +338,6 @@
 #mainTextBox {
   margin-bottom: 70px !important;
 }
-
 
 
 #popup {
@@ -398,9 +398,8 @@
 
 @media screen and (max-width: 38cm) {
   #siteContent {
-    width: 24cm;
+    width: 85%;
   }
-
 
   #popup {
     width: 90%;
@@ -412,13 +411,26 @@
   }
 }
 
+@media screen and (max-width: 30cm) {
+	#references {
+		margin-top: -5px;
+		display: block;
+	}
+	#references figure{
+		margin-left: 0px;
+		margin-right: 0px;
+		max-width: 100%;
+	}
+}
+
+
+
 
 .mobile {
   display: none;
 }
 
 @media screen and (max-width: 24cm) {
-
 
 
   .contactFormButton {
@@ -443,7 +455,7 @@
   }
 
   #siteContent {
-    width: 90%;
+    width: 93%;
   }
 
   #siteContent .contentElement h2 {
@@ -533,34 +545,31 @@
     margin-bottom: 60px !important;
   }
 
-
-  #references {
-    max-width: 500px;
-    margin-top: -5px;
-  }
-
-  #references .block {
+  #references figure {
     min-height: 80px;
     margin: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 
-  #references .block .imageBg img {
+  #references figure img {
     width: 80px;
     height: 80px;
+		margin-top: 2px;
   }
 
   #references .block:not(.imageLeft) .text {
-    margin-right: 100px;
+    margin-right: 92px;
   }
   #references .block:not(.imageRight) .text {
-    margin-left: 100px;
+    margin-left: 92px;
+  }
+	#references figure .desc {
+		padding-top: -5px;
+    margin-left: 92px;
+		font-size: 15px;
   }
 
-  #references .block h3 {
-    font-size: 25px;
-  }
 
 
 }

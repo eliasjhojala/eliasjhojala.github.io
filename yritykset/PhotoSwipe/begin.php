@@ -1,7 +1,6 @@
 <?php
-  function showImage($image) {
+  function showImage($image, $desc = null, $class = null) {
 
-    $desc = "";
     $description = "<figcaption>".$desc."</figcaption>";
     list($width, $height) = getimagesize($image);
     if($width < 500 && $height < 500) {
@@ -14,9 +13,10 @@
 
       <figure class="imageBlock">
         <a href="<?php echo $image; ?>" data-size="<?php echo $imgSize; ?>">
-            <img src="<?php echo $image; ?>"><br>
+            <img src="<?php echo $image; ?>">
+            <?php if($desc) { ?><div class="desc"><?php echo $desc; ?></div><?php } ?>
         </a>
-        <?php echo $description; ?>
+        <?php if($desc) { echo $description; } ?>
       </figure>
 
 <?php
