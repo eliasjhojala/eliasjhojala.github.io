@@ -21,6 +21,7 @@
 ?>
 
 
+
 <?php function showImages($images) {?>
   <div class="my-gallery">
     <?php

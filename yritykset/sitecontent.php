@@ -68,7 +68,9 @@ assets/images/placeHolder_2.JPG
 
 $referenceTexts = explode(";\n", $referenceTextList);
 $referenceImages = explode(";\n", $referenceImageList);
+$referenceImages = array_map(trim, $referenceImages);
 $images = explode("\n", $imageList);
+$images = array_map(trim, $images);
 $bullets = explode("\n", $bulletList);
 
 ?>
@@ -94,7 +96,7 @@ $bullets = explode("\n", $bulletList);
       foreach ($images as $image)
         if($image != "") { echo "<img src='".$image."'>"; }
      ?> -->
- 
+
     <?php   showImages($images); ?>
 
 
@@ -131,15 +133,16 @@ $bullets = explode("\n", $bulletList);
             $txt = $referenceTexts[$i];
             $img = $referenceImages[$i];
         ?>
+
+
             <div class="block imageLeft">
-              <div class="imageBg"><img src="<?php echo $img; ?>"></div>
+              <img src="<?php echo $img; ?>">
               <div class="text"><?php echo $txt; ?>
               </div>
             </div>
         <?php
           }
         ?>
-
       </div>
     </div>
   </div>

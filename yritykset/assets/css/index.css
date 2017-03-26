@@ -242,15 +242,11 @@
 #references h3 { color: #3949AB; }
 
 
-#references .block .imageBg {
-  display: inline-block;
-}
-
-#references .block:not(.imageRight) .imageBg {
+#references .block:not(.imageRight) img {
   float: left;
 }
 
-#references .block:not(.imageLeft) .imageBg {
+#references .block:not(.imageLeft) img {
   float: right;
 }
 
@@ -261,7 +257,7 @@
   margin-left: 250px;
 }
 
-#references .block .imageBg img {
+#references .block img {
   width: 200px;
   height: 200px;
 }
