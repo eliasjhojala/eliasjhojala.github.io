@@ -3,7 +3,7 @@
 
 
 #teaser {
-  
+
 }
 
 .videoWrapper {
@@ -188,10 +188,16 @@
   margin-bottom: 60px !important;
 }
 
-#imagesElement img {
+#imagesElement figure {
+  display: block;
   float: left;
   width: 49%;
   margin: 0.5%;
+  height: auto;
+}
+
+#imagesElement figure img {
+  width: 100%;
   height: auto;
 }
 
@@ -239,7 +245,7 @@
 #references .block .imageBg {
   display: inline-block;
 }
-  
+
 #references .block:not(.imageRight) .imageBg {
   float: left;
 }
@@ -342,14 +348,14 @@
   position: fixed;
   width: 50%;
   height: 50%;
-  
+
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  
+
   margin: auto;
-  
+
   background: white;
   border-radius: 5px;
   box-shadow: 0px 0px 2px black;
@@ -398,8 +404,8 @@
   #siteContent {
     width: 24cm;
   }
-  
-  
+
+
   #popup {
     width: 90%;
     height: 85%;
@@ -439,29 +445,29 @@
     clear: both;
     display: block;
   }
-    
+
   #siteContent {
     width: 90%;
   }
-  
+
   #siteContent .contentElement h2 {
       font-size: calc( 20px + 2vw );
   }
-  
+
   #siteContent .contentElement .content {
     font-size: 15px;
   }
-  
+
   #whiteBar {
     display: none;
   }
-  
+
   #descAndBen {
     display: block;
     min-width: 0;
     width: auto;
   }
-  
+
   #description {
     width: 100%;
     display: block;
@@ -470,20 +476,20 @@
     margin-right: auto;
     font-size: 20px;
   }
-  
-  
-  
+
+
+
   #moreDescription {
     width: 100%;
     max-width: 500px;
   }
-  
-  
+
+
   #moreDescription .block {
     margin-top: 40px;
   }
-  
-  
+
+
   #benefits {
     text-align: center;
     margin-left: auto;
@@ -494,38 +500,38 @@
     float: none;
     border: none;
   }
-  
+
   #benefits {
     max-width: 300px;
   }
-  
-  
+
+
   #benefits .block {
     margin: 5%;
     width: 25%;
     margin-bottom: 0px;
   }
-  
+
   #benefits .block .bg img {
     width: 100%;
     max-width: 100px;
   }
 
 
-  
+
   #benefits .block h3 {
     font-size: calc( 8px + 1.6vw );
     margin-bottom: 0px;
   }
-  
+
   #moreDescription .bg {
     margin-right: 20px;
   }
-  
+
   #moreDescription img {
     width: 80px;
   }
-  
+
   #bullets {
     font-size: 20px;
     margin-bottom: 60px !important;
@@ -536,26 +542,26 @@
     max-width: 500px;
     margin-top: -5px;
   }
-  
+
   #references .block {
     min-height: 80px;
     margin: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   #references .block .imageBg img {
     width: 80px;
     height: 80px;
   }
-  
+
   #references .block:not(.imageLeft) .text {
     margin-right: 100px;
   }
   #references .block:not(.imageRight) .text {
     margin-left: 100px;
   }
-  
+
   #references .block h3 {
     font-size: 25px;
   }
