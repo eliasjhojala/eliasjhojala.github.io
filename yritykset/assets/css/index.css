@@ -1,5 +1,6 @@
 @import url("theme.css");
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu";
+@import url("references.css");
 
 
 #teaser {
@@ -48,6 +49,17 @@
 
 #siteContent .contentElement {
   margin: 30px 0px 30px 0px;
+	background: white;
+  box-shadow: 0px 2.5px 6px rgb(200, 200, 200);
+  border-radius: 3px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 24cm) {
+	#siteContent .contentElement {
+		box-shadow: 0px 1px 2px rgb(200, 200, 200);
+		border-radius: 0px;
+	}
 }
 
 #siteContent .contentElement h2 {
@@ -133,10 +145,6 @@
   min-width: calc(24cm*0.7);
 }
 
-#moreDescription {
-  /*display: flex;*/
-}
-
 #moreDescription .bg {
   background: var(--theme-color-red);;
   border-radius: 100%;
@@ -145,55 +153,56 @@
   float: left;
 }
 
+
+
 #moreDescription img {
   width: 200px;
 }
 
 
 
-#benefits {
-  text-align: center;
-  width: 350px;
-  float: left;
-  flex-shrink: 0;
-  margin-left: -2px;
-  border-left: 2px solid #d3d3d3;
-}
-
-
-
-#benefits .block {
-  display: inline-block;
-  margin: 2%;
-}
-
-#benefits .block .bg {
-  background: #3F51B5;
-  display: inline-block;
-  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 100%;
-}
-
-#benefits .block img {
-  width: 80px;
-}
-
-#benefits .block h3 {
-  font-size: 18px;
-}
-
-
-#imagesElement {
-  width: 100%;
-  margin-bottom: 60px !important;
-}
-
-#imagesElement figure {
+#siteContent #imagesElement figure {
   display: block;
   float: left;
-  width: 49%;
-  margin: 0.5%;
+  width: 45%;
   height: auto;
+	background: white;
+	padding: 2%;
+	margin: 0.5%;
+}
+
+#siteContent #imagesElement {
+	background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+#siteContent #imagesElement .my-gallery {
+	width: 100%;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#siteContent #imagesElement figure {
+	padding: 2%;
+	margin: 0;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	box-shadow: 0px 2.5px 6px rgb(200, 200, 200);
+}
+
+
+@media screen and (max-width: 24cm) {
+	#siteContent #imagesElement figure {
+		width: 46.5%;
+		padding: 1.5%;
+	}
+
+	#siteContent #imagesElement {
+		margin: 1.5%;
+	}
 }
 
 #imagesElement figure img {
@@ -209,78 +218,7 @@
 }
 
 
-#references {
-  margin-left: auto;
-  margin-right: auto;
-	margin-top: -20px;
-	display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-#references .block {
-  min-height: 200px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-
-
-/*MATERIAL DESIGN BLOCK*/
-/*#references .block {
-  min-height: 200px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 1px 6px rgb(200, 200, 200);
-  background: white;
-  padding: 40px;
-  border-radius: 1px;
-}*/
-
-#references h3 { color: #3949AB; }
-
-
-#references .block:not(.imageRight) img {
-  float: left;
-}
-
-#references .block:not(.imageLeft) img {
-  float: right;
-}
-
-#references .block:not(.imageLeft) .text {
-  margin-right: 250px;
-}
-#references .block:not(.imageRight) .text {
-  margin-left: 250px;
-}
-
-#references figure {
-	margin-left: 0px;
-	margin-right: 0px;
-	max-width: 49%;
-}
-
-#references figure img {
-  width: 200px;
-  height: 200px;
-	float: left;
-}
-
-#references figure .desc {
-  font-size: 18px;
-	margin-left: 220px;
-	padding-top: 0px;
-	margin-top: 0px;
-	word-wrap: break-word;
-}
-
-#references figure:after {
-   content: " ";
-   display: block;
-   height: 0;
-   clear: both;
-}
 
 #contact .content {
   max-width: 800px;
@@ -333,10 +271,6 @@
 #bullets {
   font-size: 30px;
   margin-bottom: 60px !important;
-}
-
-#mainTextBox {
-  margin-bottom: 70px !important;
 }
 
 
@@ -411,19 +345,6 @@
   }
 }
 
-@media screen and (max-width: 30cm) {
-	#references {
-		margin-top: -5px;
-		display: block;
-	}
-	#references figure{
-		margin-left: 0px;
-		margin-right: 0px;
-		max-width: 100%;
-	}
-}
-
-
 
 
 .mobile {
@@ -455,7 +376,7 @@
   }
 
   #siteContent {
-    width: 93%;
+    width: 100%;
   }
 
   #siteContent .contentElement h2 {
@@ -544,33 +465,6 @@
     font-size: 20px;
     margin-bottom: 60px !important;
   }
-
-  #references figure {
-    min-height: 80px;
-    margin: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  #references figure img {
-    width: 80px;
-    height: 80px;
-		margin-top: 2px;
-  }
-
-  #references .block:not(.imageLeft) .text {
-    margin-right: 92px;
-  }
-  #references .block:not(.imageRight) .text {
-    margin-left: 92px;
-  }
-	#references figure .desc {
-		padding-top: -5px;
-    margin-left: 92px;
-		font-size: 15px;
-  }
-
-
 
 }
 

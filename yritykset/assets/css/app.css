@@ -20,6 +20,7 @@ body {
   padding: 0px;
   background-image: url(/assets/media/texture.jpg);
   overflow-x: hidden;
+  background: rgb(245, 245, 245);
 }
 
 #linkbar {
