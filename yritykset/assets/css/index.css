@@ -44,6 +44,7 @@
   width: 75%;
   margin: 0px auto 0px auto;
   min-height: 100%;
+	max-width: 1800px;
 }
 
 
@@ -59,12 +60,13 @@
 	#siteContent .contentElement {
 		box-shadow: 0px 1px 2px rgb(200, 200, 200);
 		border-radius: 0px;
+		margin: 10px 0px 10px 0px;
 	}
 }
 
 #siteContent .contentElement h2 {
   text-align: center;
-  font-size: 3.5vw;
+  font-size: 60px;
   padding: 0px;
   margin: 0px;
   color: var(--main-header-color);
@@ -161,21 +163,13 @@
 
 
 
-#siteContent #imagesElement figure {
-  display: block;
-  float: left;
-  width: 45%;
-  height: auto;
-	background: white;
-	padding: 2%;
-	margin: 0.5%;
-}
-
 #siteContent #imagesElement {
 	background: none;
   box-shadow: none;
   padding: 0;
   margin: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 #siteContent #imagesElement .my-gallery {
 	width: 100%;
@@ -186,7 +180,11 @@
 }
 
 #siteContent #imagesElement figure {
-	padding: 2%;
+	display: block;
+  float: left;
+  width: 45%;
+	background: white;
+	padding: 1.5vw;
 	margin: 0;
 	margin-top: 0.5%;
 	margin-bottom: 0.5%;
@@ -194,14 +192,20 @@
 }
 
 
+@media screen and (min-width: 2571.4px) {
+	#siteContent #imagesElement figure {
+		padding: 30px;
+	}
+}
+
 @media screen and (max-width: 24cm) {
 	#siteContent #imagesElement figure {
 		width: 46.5%;
-		padding: 1.5%;
+		padding: 1.3vw;
 	}
 
 	#siteContent #imagesElement {
-		margin: 1.5%;
+		margin: 1.3vw;
 	}
 }
 
