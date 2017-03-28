@@ -66,8 +66,7 @@
   filter: grayscale(0%); }
 
 .my-gallery {
-  width: 100%;
-  float: left; }
+  width: 100%; }
 
 .my-gallery figure {
   display: block; }

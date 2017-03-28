@@ -33,7 +33,65 @@ function myMove() {
 
   // setInterval(myMove, 1);
 
+
+
 $(function() {
+
+  $('#siteContent').on('click touchstart', function(e) {
+    $('#linkbar').removeClass('open');
+  });
+
+  $(window).on('scroll', function(e) {
+    $('#linkbar').removeClass('open');
+  });
+
+  $('#linkBarLinks').on('swipe', function(e) {
+    $('#linkbar').removeClass('open');
+  });
+
+
+  document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;
+var yDown = null;
+
+function handleTouchStart(evt) {
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+};
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            $('#linkbar').toggleClass('open');
+        } else {
+            $('#linkbar').removeClass('open');
+        }
+    } else {
+        if ( yDiff > 0 ) {
+            /* up swipe */
+        } else {
+            /* down swipe */
+        }
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;
+};
+
+
+
   if ($(window).width() > 800) {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser.mp4" type="video/mp4">');
   } else if ($(window).width() > 600) {
@@ -55,7 +113,7 @@ $(function() {
     }, 4000);
   });
 
-  
+
   $('video').bind("timeupdate", function() {
     if(this.currentTime >= 11) {
       this.pause();
@@ -63,14 +121,14 @@ $(function() {
       $('video, playbutton').off('touchstart click');
     }
   });
-  
+
   function playVideo() {
     $('video').get(0).play();
   }
   $('video, playButton').click(playVideo);
-  
+
   $(document).on('touchstart click', playVideo);
-  
+
   $('video').on('play', function () {
     $('.playButton').css("display", "none")
   });
@@ -170,8 +228,8 @@ popup = {
     self.contentElement.html("");
     $(document).off('keyup');
   }
-};
 
+};
 
 menuBox = {
   element: null,

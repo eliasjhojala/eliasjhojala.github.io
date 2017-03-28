@@ -10,19 +10,18 @@
       box-shadow: 0px 1px 6px #c8c8c8; }
     #siteContent #referenssit .content {
       padding: 0px; } }
-#siteContent #referenssit #references {
+#siteContent #referenssit .content {
   float: none;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
   @media screen and (max-width: 30cm) {
-    #siteContent #referenssit #references {
+    #siteContent #referenssit .content {
       margin-top: -20px;
       display: block; } }
-  #siteContent #referenssit #references figure {
+  #siteContent #referenssit .content figure {
     box-shadow: 0px 1px 6px #c8c8c8;
     background: white;
     padding: 20px;
@@ -33,14 +32,14 @@
     margin-top: 0.7vw;
     margin-bottom: 0.7vw; }
     @media screen and (max-width: 30cm) {
-      #siteContent #referenssit #references figure {
+      #siteContent #referenssit .content figure {
         max-width: 100%;
         margin-top: 22px;
         margin-bottom: 22px;
         margin-left: 0px;
         margin-right: 0px; } }
     @media screen and (max-width: 24cm) {
-      #siteContent #referenssit #references figure {
+      #siteContent #referenssit .content figure {
         min-height: 80px;
         margin: 0px;
         margin-top: 20px;
@@ -50,44 +49,40 @@
         border-bottom: 1px solid #c8c8c8;
         border-radius: 0px;
         padding-bottom: 15px; }
-        #siteContent #referenssit #references figure:last-of-type {
+        #siteContent #referenssit .content figure:last-of-type {
           border-bottom: 0px; } }
-    #siteContent #referenssit #references figure img {
+    #siteContent #referenssit .content figure img {
       width: 200px;
       height: 200px;
       float: left;
       border-radius: 1px; }
       @media screen and (max-width: 24cm) {
-        #siteContent #referenssit #references figure img {
+        #siteContent #referenssit .content figure img {
           width: 80px;
           height: 80px;
           margin-top: 2px;
           border-radius: 0.7px; } }
-    #siteContent #referenssit #references figure .desc {
+    #siteContent #referenssit .content figure .desc {
       font-size: 18px;
       margin-left: 220px;
       padding-top: 0px;
       margin-top: 0px;
       word-wrap: break-word; }
       @media screen and (max-width: 34cm) {
-        #siteContent #referenssit #references figure .desc {
+        #siteContent #referenssit .content figure .desc {
           font-size: 16px; } }
       @media screen and (max-width: 24cm) {
-        #siteContent #referenssit #references figure .desc {
+        #siteContent #referenssit .content figure .desc {
           padding-top: -5px;
           margin-left: 92px;
           font-size: 15px; } }
-    #siteContent #referenssit #references figure:after {
+    #siteContent #referenssit .content figure:after {
       content: " ";
       display: block;
       height: 0;
       clear: both; }
-
-#referenssit .content figure:after {
-  content: " ";
-  display: block;
-  height: 0;
-  clear: both; }
+  #siteContent #referenssit .content:after {
+    content: none; }
 
 #siteContent #imagesElement {
   background: none;

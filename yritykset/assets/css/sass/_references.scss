@@ -14,11 +14,10 @@
     }
   }
 
-  #references {
+  .content {
     float: none;
     margin-left: auto;
     margin-right: auto;
-  	margin-top: -5px;
   	display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -98,13 +97,9 @@
 
     }
 
+    &:after {
+     content: none;
+   }
+
   }
-
-}
-
-#referenssit .content figure:after {
-   content: " ";
-   display: block;
-   height: 0;
-   clear: both;
 }

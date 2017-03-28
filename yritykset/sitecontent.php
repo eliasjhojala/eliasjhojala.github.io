@@ -131,19 +131,17 @@ $bullets = explode("\n", $bulletList);
 
   <div class="contentElement" id="referenssit">
     <h2>Referenssit</h2>
-    <div class="content">
-      <div id="references" class="my-gallery">
-        <?php
-          for ($i = 0; $i < sizeof($referenceTexts); $i++) {
-            $txt = $referenceTexts[$i];
-            $img = $referenceImages[$i];
-        ?>
+    <div id="references" class="content my-gallery">
+      <?php
+        for ($i = 0; $i < sizeof($referenceTexts); $i++) {
+          $txt = $referenceTexts[$i];
+          $img = $referenceImages[$i];
+      ?>
 
-            <?php showImage($img, $txt); ?>
-        <?php
-          }
-        ?>
-      </div>
+          <?php showImage($img, $txt); ?>
+      <?php
+        }
+      ?>
     </div>
   </div>
 
