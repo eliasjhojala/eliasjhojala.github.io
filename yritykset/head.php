@@ -2,10 +2,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="assets/css/app.css">
-<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-<link rel="stylesheet" type="text/css" href="assets/css/form.css">
-<link rel="stylesheet" type="text/css" href="assets/css/images.css">
+<link rel="stylesheet" type="text/css" href="assets/css/compiled/app.css">
+<link rel="stylesheet" type="text/css" href="assets/css/compiled/index.css">
+<link rel="stylesheet" type="text/css" href="assets/css/compiled/form.css">
+<link rel="stylesheet" type="text/css" href="assets/css/compiled/images.css">
 <link rel='stylesheet prefetch' href='<?php echo $photoSwipePath ?>photoSwipe.css'>
 
 <script src="assets/js/jquery.js"></script>

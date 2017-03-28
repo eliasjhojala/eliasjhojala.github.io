@@ -133,7 +133,6 @@ $bullets = explode("\n", $bulletList);
     <h2>Referenssit</h2>
     <div class="content">
       <div id="references" class="my-gallery">
-
         <?php
           for ($i = 0; $i < sizeof($referenceTexts); $i++) {
             $txt = $referenceTexts[$i];
