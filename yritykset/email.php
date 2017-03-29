@@ -1,5 +1,7 @@
 <?php
-if($_REQUEST['preventRobot'] == '6') {
+$preventRobot = $_REQUEST['preventRobot'];
+$preventRobot = 6;
+if($preventRobot == '6') {
   $email = $_REQUEST['email'] ; // Haetaan lomakkeesta sähköpostiosoite kenttä
   $message = $_REQUEST['message']; // Haetaan lomakkeesta viesti kenttä
   $mail = new EMail;

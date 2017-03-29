@@ -34,6 +34,18 @@ function myMove() {
   // setInterval(myMove, 1);
 
 
+function swipeRight() {
+  $('#linkbar').removeClass('open');
+}
+function swipeLeft() {
+  $('#linkbar').toggleClass('open');
+}
+function swipeUp() {
+}
+function swipeDown() {
+}
+
+
 
 $(function() {
 
@@ -51,44 +63,7 @@ $(function() {
 
 
   document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
-
-var xDown = null;
-var yDown = null;
-
-function handleTouchStart(evt) {
-    xDown = evt.touches[0].clientX;
-    yDown = evt.touches[0].clientY;
-};
-
-function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
-        return;
-    }
-
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if ( xDiff > 0 ) {
-            $('#linkbar').toggleClass('open');
-        } else {
-            $('#linkbar').removeClass('open');
-        }
-    } else {
-        if ( yDiff > 0 ) {
-            /* up swipe */
-        } else {
-            /* down swipe */
-        }
-    }
-    /* reset values */
-    xDown = null;
-    yDown = null;
-};
+  document.addEventListener('touchmove', handleTouchMove, false);
 
 
 
@@ -152,6 +127,31 @@ function handleTouchMove(evt) {
     linkBarFlow();
   });
 });
+
+var xDown = null; var yDown = null;
+
+function handleTouchStart(evt) {
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+};
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) { return; }
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff*2)) {/*most significant*/
+        if (xDiff > 0) { swipeLeft();  }
+        else { swipeRight(); }
+    } else if(Math.abs(yDiff) > Math.abs(xDiff*2)) {
+        if (yDiff > 0) { swipeUp(); }
+        else { swipeDown(); }
+    }
+
+    xDown = null; yDown = null;
+};
 
 function clamp(val, min, max) {
   return Math.min(Math.max(val, min), max);

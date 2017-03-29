@@ -110,7 +110,7 @@ $bullets = explode("\n", $bulletList);
 
 
   <div class="contentElement">
-    <div id="bullets">
+    <div id="bullets" class="content">
       <ul>
         <?php
           foreach ($bullets as $bullet)
