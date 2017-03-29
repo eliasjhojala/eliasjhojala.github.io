@@ -1,7 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu|Roboto";
 a {
   color: #325096;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
 
 html {
   font-family: 'Roboto';
