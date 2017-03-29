@@ -27,6 +27,7 @@
     @media screen and (max-width: 24cm) {
       margin-top: -15px;
   		display: block;
+      width: auto;
     }
 
     figure {
@@ -35,11 +36,11 @@
       padding: 20px;
       margin-left: 0px;
     	margin-right: 0px;
-    	max-width: calc(50% - 40px - 0.7vw);
+    	width: calc(50% - 40px - 0.7vw);
       margin-top: 0.7vw;
       margin-bottom: 0.7vw;
       @media screen and (max-width: 30cm) {
-        max-width: 100%;
+        width: auto;
         margin-top: 22px;
         margin-bottom: 22px;
         margin-left: 0px;

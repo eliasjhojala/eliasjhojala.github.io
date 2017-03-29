@@ -36,9 +36,11 @@ function myMove() {
 
 function swipeRight() {
   $('#linkbar').removeClass('open');
+  $('#popupBackground').removeClass('open');
 }
 function swipeLeft() {
   $('#linkbar').toggleClass('open');
+  $('#popupBackground').toggleClass('open');
 }
 function swipeUp() {
 }
@@ -49,16 +51,24 @@ function swipeDown() {
 
 $(function() {
 
+  $('#popupBackground').on('click touchstart', function(e) {
+    $('#linkbar').removeClass('open');
+    $('#popupBackground').removeClass('open');
+  });
+
   $('#siteContent').on('click touchstart', function(e) {
     $('#linkbar').removeClass('open');
+    $('#popupBackground').removeClass('open');
   });
 
   $(window).on('scroll', function(e) {
     $('#linkbar').removeClass('open');
+    $('#popupBackground').removeClass('open');
   });
 
   $('#linkBarLinks').on('swipe', function(e) {
     $('#linkbar').removeClass('open');
+    $('#popupBackground').removeClass('open');
   });
 
 
@@ -248,9 +258,11 @@ menuBox = {
   toggle: function() {
     var self = menuBox;
     self.element.toggleClass('open');
+    $('#popupBackground').toggleClass('open');
   },
   close: function() {
     var self = menuBox;
     self.element.removeClass('open');
+    $('#popupBackground').removeClass('open');
   }
 };

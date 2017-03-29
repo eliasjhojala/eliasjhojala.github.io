@@ -33,7 +33,8 @@ body {
   width: auto;
   position: absolute;
   left: 30px;
-  top: 5px; }
+  top: 5px;
+  z-index: 1000000; }
 
 #linkBarLinks a {
   margin-right: 40px;
@@ -93,6 +94,9 @@ body {
   body {
     font-size: 15px; }
 
+  #linkbar {
+    z-index: 100000; }
+
   #linkBarLinks {
     position: fixed;
     right: -350px;
@@ -101,14 +105,13 @@ body {
     top: 40px;
     background: white;
     padding: 30px;
-    border-radius: 2px;
-    border-left: 2px solid #969696;
+    border-radius: 0px;
     height: 100%;
     width: 250px;
     font-size: 20px;
     max-width: 50%;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
-    z-index: 10000; }
+    z-index: 10000;
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.23) inset, -6px 0px 0px 0px rgba(0, 0, 0, 0.01), -5.5px 0px 0px 0px rgba(0, 0, 0, 0.02), -5px 0px 0px 0px rgba(0, 0, 0, 0.03), -4.5px 0px 0px 0px rgba(0, 0, 0, 0.04), -4px 0px 0px 0px rgba(0, 0, 0, 0.05), -3.5px 0px 0px 0px rgba(0, 0, 0, 0.06), -3px 0px 0px 0px rgba(0, 0, 0, 0.07), -2.5px 0px 0px 0px rgba(0, 0, 0, 0.08), -2px 0px 0px 0px rgba(0, 0, 0, 0.09), -1.5px 0px 0px 0px rgba(0, 0, 0, 0.1), -1px 0px 0px 0px rgba(0, 0, 0, 0.11), -0.5px 0px 0px 0px rgba(0, 0, 0, 0.12); }
 
   #linkBarLinks a {
     display: block;

@@ -16,10 +16,12 @@ input, textarea {
   outline: none;
   box-sizing: border-box;
   -webkit-appearance: none;
-  border: none; }
+  border: none;
+  -webkit-tap-highlight-color: transparent; }
 
 textarea {
-  height: 180px; }
+  height: 180px;
+  resize: none; }
 
 input[type="submit"] {
   background-color: #4285f4;
@@ -43,5 +45,12 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 input[type="submit"]:active {
   background-color: #3367d6;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32); }
+
+input[type="text"] {
+  border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block; }
 
 /*# sourceMappingURL=form.css.map */
