@@ -4,7 +4,7 @@
 <meta name="theme-color" content="#F44336">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta property="og:image" content="//cdn.junat.net/logo_square.png">
+<meta property="og:image" content="assets/images/icon_2.png">
 
 <link rel="stylesheet" type="text/css" href="assets/css/compiled/app.css">
 <link rel="stylesheet" type="text/css" href="assets/css/compiled/index.css">

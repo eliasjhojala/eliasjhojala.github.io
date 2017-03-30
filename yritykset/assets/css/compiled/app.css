@@ -67,7 +67,13 @@ body {
 #blackBar {
   visibility: none; }
 
+#linkbar #title {
+  display: none; }
+
 @media screen and (max-width: 24cm) {
+  #linkbar {
+    text-align: left; }
+
   #title {
     font-size: 24px;
     margin-left: 15px;
@@ -90,7 +96,8 @@ body {
     width: auto;
     position: absolute;
     left: 6px;
-    top: 6px; }
+    top: 6px;
+    display: none; }
 
   body {
     font-size: 15px; }
@@ -100,9 +107,9 @@ body {
 
   #linkBarLinks {
     position: fixed;
-    right: -350px;
+    left: -350px;
     opacity: 0;
-    transition: right ease-in 400ms, opacity 1ms ease 300ms;
+    transition: left ease-in 600ms, opacity 1ms ease 500ms;
     top: 56px;
     background: white;
     padding: 36px;
@@ -112,8 +119,7 @@ body {
     width: 250px;
     font-size: 20px;
     max-width: 50%;
-    z-index: 10000;
-    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.23) inset, -3px 0px 0px 0px rgba(0, 0, 0, 0.03), -2.5px 0px 0px 0px rgba(0, 0, 0, 0.04), -2px 0px 0px 0px rgba(0, 0, 0, 0.05), -1.5px 0px 0px 0px rgba(0, 0, 0, 0.06), -1px 0px 0px 0px rgba(0, 0, 0, 0.07), -0.5px 0px 0px 0px rgba(0, 0, 0, 0.08); }
+    z-index: 10000; }
 
   #linkBarLinks a {
     display: block;
@@ -127,9 +133,10 @@ body {
     font-family: 'Roboto'; }
 
   #linkbar.open #linkBarLinks {
-    right: 0;
+    left: 0;
     opacity: 1;
-    transition: right 300ms, opacity 1ms ease 0ms; }
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.23) inset, 3px 0px 0px 0px rgba(0, 0, 0, 0.03), 2.5px 0px 0px 0px rgba(0, 0, 0, 0.04), 2px 0px 0px 0px rgba(0, 0, 0, 0.05), 1.5px 0px 0px 0px rgba(0, 0, 0, 0.06), 1px 0px 0px 0px rgba(0, 0, 0, 0.07), 0.5px 0px 0px 0px rgba(0, 0, 0, 0.08);
+    transition: left 500ms, opacity 1ms ease 0ms; }
 
   #linkbar:not(.open) .toggle-menubox::before {
     content: 'menu'; }
@@ -139,7 +146,7 @@ body {
 
   #menuBoxIcon {
     display: inline-block;
-    margin-right: 0px;
+    margin-left: 0px;
     height: 100%; }
 
   #menuBoxIcon a {
@@ -149,7 +156,16 @@ body {
     z-index: 1000;
     vertical-align: middle;
     line-height: 56px;
-    margin-right: 25px; }
+    margin-left: 10px; }
+
+  #linkbar #title {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 20px;
+    margin-left: 65px;
+    font-weight: normal;
+    font-family: 'Roboto'; }
 
   #blackBar {
     visibility: visible;

@@ -35,12 +35,16 @@ function myMove() {
 
 
 function swipeRight() {
-  $('#linkbar').removeClass('open');
-  $('#popupBackground').removeClass('open');
+  if($('.pswp').css("display") == "none") {
+    $('#linkbar').removeClass('open');
+    $('#popupBackground').removeClass('open');
+  }
 }
 function swipeLeft() {
-  $('#linkbar').toggleClass('open');
-  $('#popupBackground').toggleClass('open');
+  if($('.pswp').css("display") == "none") {
+    $('#linkbar').toggleClass('open');
+    $('#popupBackground').toggleClass('open');
+  }
 }
 function swipeUp() {
 }

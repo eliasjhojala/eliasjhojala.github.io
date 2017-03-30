@@ -19,4 +19,7 @@
   <span id="menuBoxIcon">
     <a href class="toggle-menubox material-icons"></a>
   </span>
+  <span id="title">
+    Snacktime
+  </span>
 </div>
