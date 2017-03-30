@@ -1,6 +1,6 @@
 <div id="bottomBar">
   <div id="contacts">
-    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton desktop" href>
+    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" class="contactFormButton desktop" href>
       Ota yhteyttä
     </a>
     
@@ -9,7 +9,7 @@
     050 574 7762<br>
     0207 354 711
     <div class="mobile" id="beforeContactFormButton"></div>
-    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" style="font-size: 20px;" class="contactFormButton mobile" href="#contact">
+    <a onClick="track('BottomBar', 'Ota yhteyttä (nappula)');" class="contactFormButton mobile" href="#contact">
       Ota yhteyttä
     </a>
     

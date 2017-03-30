@@ -92,10 +92,10 @@ $(function() {
 
   $('.contactFormButton').on('click', function(e) {
     e.preventDefault();
-    $('#contact .content').addClass('activateContactForm');
+    $('#contact').addClass('highlight');
     setTimeout(function () {
-      $('#contact .content').removeClass('activateContactForm');
-    }, 4000);
+      $('#contact').removeClass('highlight');
+    }, 750);
   });
 
 

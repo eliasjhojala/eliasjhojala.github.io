@@ -1,7 +1,7 @@
 <div id="linkbar">
   
   <a onClick="track('Menubar', 'Logo');" href="#teaser">
-    <img src="assets/images/logo.png" id="logo">
+    <img src="assets/images/logo.svg" id="logo">
   </a>
   
   <div id="linkBarLinks">

@@ -1,7 +1,7 @@
 <title>Snacktime</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f44336">
+<meta name="theme-color" content="#F44336">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta property="og:image" content="//cdn.junat.net/logo_square.png">
