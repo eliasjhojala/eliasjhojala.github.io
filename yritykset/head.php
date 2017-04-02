@@ -6,10 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta property="og:image" content="assets/images/icon_2.png">
 
-<link rel="stylesheet" type="text/css" href="assets/css/compiled/app.css">
-<link rel="stylesheet" type="text/css" href="assets/css/compiled/index.css">
-<link rel="stylesheet" type="text/css" href="assets/css/compiled/form.css">
-<link rel="stylesheet" type="text/css" href="assets/css/compiled/images.css">
+<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 <link rel='stylesheet prefetch' href='<?php echo $photoSwipePath ?>photoSwipe.css'>
 
 <script src="assets/js/jquery.js"></script>

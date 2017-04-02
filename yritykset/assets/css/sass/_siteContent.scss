@@ -1,0 +1,56 @@
+#siteContent {
+  width: 75%;
+  margin: 0px auto 0px auto;
+  min-height: 100%;
+	max-width: 1800px;
+  
+  @media screen and (max-width: 38cm) {
+    width: 85%;
+  }
+  @media screen and (max-width: 24cm) {
+    width: 95%;
+  }
+  
+  
+  .contentElement {
+    margin: 30px 0px 35px 0px;
+  	background: white;
+    @include material();
+    padding: 20px;
+    
+    h2 {
+      text-align: center;
+      font-size: 60px;
+      padding: 0px;
+      margin: 0px;
+      color: $main-header-color;
+      
+      @media screen and (max-width: 24cm) {
+        font-size: calc( 20px + 2vw );
+      }
+    }
+    .content {
+      padding: 10px;
+      color: $main-content-color;
+      margin-top: 15px;
+      font-size: 22px;
+      
+      @media screen and (max-width: 24cm) {
+        font-size: 15px;
+      }
+      
+      &:after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+      }
+    }
+    
+    @media screen and (max-width: 24cm) {
+      @include material();
+  		margin: 15px 0px 15px 0px;
+    }
+  }
+    
+}

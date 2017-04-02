@@ -8,42 +8,19 @@ function smallDisplay() {
   return $(window).width() < 888;
 }
 
-var contactFormButtonSize = 20;
-var contactFormButtonFinalSize = 20;
-var contactFormButtonPaddingDirection = 0;
 
-function myMove() {
-  var contactFormButtonFinalSize = (150-Math.sin(contactFormButtonSize/100)*100) / 10;
-  if(contactFormButtonSize < 20) {
-    contactFormButtonPaddingDirection = 1;
-  }
-  else if(contactFormButtonSize > 150) {
-    contactFormButtonPaddingDirection = 0;
-  }
-  if(contactFormButtonPaddingDirection == 1) {
-    contactFormButtonSize+=0.5;
-  }
-  else if(contactFormButtonPaddingDirection == 0) {
-    contactFormButtonSize-=0.5;
-  }
-  $('.contactFormButton').css("padding", String(contactFormButtonFinalSize + 17));
-  $('.contactFormButton').css("margin", String(-contactFormButtonFinalSize + 17));
-  $('.contactFormButton').css("margin-left", String(-contactFormButtonFinalSize + 5));
-}
-
-  // setInterval(myMove, 1);
 
 
 function swipeRight() {
   if($('.pswp').css("display") == "none") {
-    $('#linkbar').removeClass('open');
-    $('#popupBackground').removeClass('open');
+    $('#linkbar').toggleClass('open');
+    $('#popupBackground').toggleClass('open');
   }
 }
 function swipeLeft() {
   if($('.pswp').css("display") == "none") {
-    $('#linkbar').toggleClass('open');
-    $('#popupBackground').toggleClass('open');
+    $('#linkbar').removeClass('open');
+    $('#popupBackground').removeClass('open');
   }
 }
 function swipeUp() {
@@ -52,8 +29,49 @@ function swipeDown() {
 }
 
 
-
 $(function() {
+  
+  $('#form').html($('#form-template').html());
+  
+  $('#form').submit(function(e) {
+    $.post( "email.php", $( "#form" ).serialize() )
+    .done(function() {
+      $('#form').html($('#form-template').html());
+      $('#form .notification').remove();
+      $('#form #submit').before($('#success-template').html());
+      setTimeout(function() { $('#form .notification').addClass('hideSlow'); }, 3000);
+    })
+    .fail(function() {
+      $('#form .notification').remove();
+      $('#form #submit').before($('#error-template').html());
+      setTimeout(function() { $('#form .notification').addClass('hideSlow'); }, 3000);
+    });
+
+    e.preventDefault();
+    
+  });
+
+
+	var ink, d, x, y;
+	$(".ripplelink").click(function(e){
+    if($(this).find(".ink").length === 0){
+        $(this).prepend("<span class='ink'></span>");
+    }
+         
+    ink = $(this).find(".ink");
+    ink.removeClass("animate");
+     
+    if(!ink.height() && !ink.width()){
+        d = Math.max($(this).outerWidth(), $(this).outerHeight());
+        ink.css({height: d, width: d});
+    }
+     
+    x = e.pageX - $(this).offset().left - ink.width()/2;
+    y = e.pageY - $(this).offset().top - ink.height()/2;
+     
+    ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+  });
+  
 
   $('#popupBackground').on('click touchstart', function(e) {
     $('#linkbar').removeClass('open');
@@ -68,6 +86,14 @@ $(function() {
   $(window).on('scroll', function(e) {
     $('#linkbar').removeClass('open');
     $('#popupBackground').removeClass('open');
+    
+    if($(window).scrollTop() > 20) {
+      $('#contactFloatingButton').addClass('hidden');
+    }
+    if($(window).scrollTop() < 20) {
+      $('#contactFloatingButton').removeClass('hidden');
+    }
+    
   });
 
   $('#linkBarLinks').on('swipe', function(e) {
@@ -103,29 +129,6 @@ $(function() {
   });
 
 
-  $('video').bind("timeupdate", function() {
-    if(this.currentTime >= 11) {
-      this.pause();
-      $(document).off('touchstart click');
-      $('video, playbutton').off('touchstart click');
-    }
-  });
-
-  function playVideo() {
-    $('video').get(0).play();
-  }
-  $('video, playButton').click(playVideo);
-
-  $(document).on('touchstart click', playVideo);
-
-  $('video').on('play', function () {
-    $('.playButton').css("display", "none")
-  });
-  function playButtonLocation() {
-    var value = $('#teaser').height() / 2 - 35;
-    if (smallDisplay()) value += $('#linkbar').outerHeight();
-    $('.playButton').css("top", value + "px");
-  }
   function linkBarFlow() {
     if (smallDisplay()) {
       $('.black').css('padding-top', $('#linkbar').outerHeight() + "px");
@@ -134,10 +137,8 @@ $(function() {
     }
   }
 
-  playButtonLocation();
   linkBarFlow();
   $(window).resize(function() {
-    playButtonLocation();
     linkBarFlow();
   });
 });

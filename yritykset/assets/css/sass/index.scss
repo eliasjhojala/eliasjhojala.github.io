@@ -1,10 +1,21 @@
 @import 'theme';
-@import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons|Ubuntu|Roboto";
+@import 'functions';
+@import 'app';
 @import 'references';
 @import 'imagesElement';
+@import 'form';
+@import 'pswp';
+@import 'siteContent';
+@import 'popup';
+
 
 #teaser {
-	@include material-shadow();
+	@include material-shadow(1);
+	margin-bottom: 1px;
+}
+
+#teaser img {
+	margin-bottom: -1px;
 }
 
 .videoWrapper {
@@ -40,51 +51,7 @@
   border: 1px solid #d3d3d3
 }
 
-#siteContent {
-  width: 75%;
-  margin: 0px auto 0px auto;
-  min-height: 100%;
-	max-width: 1800px;
-}
 
-
-#siteContent .contentElement {
-  margin: 30px 0px 35px 0px;
-	background: white;
-  @include material();
-  padding: 20px;
-}
-
-@media screen and (max-width: 24cm) {
-	#siteContent .contentElement {
-		@include material();
-		border-radius: 0px;
-		margin: 15px 0px 15px 0px;
-	}
-}
-
-#siteContent .contentElement h2 {
-  text-align: center;
-  font-size: 60px;
-  padding: 0px;
-  margin: 0px;
-  color: $main-header-color;
-}
-
-#siteContent .contentElement .content {
-  padding: 10px;
-  color: $main-content-color;
-  margin-top: 15px;
-  font-size: 22px;
-}
-
-
-.contentElement .content:after {
-   content: " ";
-   display: block;
-   height: 0;
-   clear: both;
-}
 
 #bottomBar {
   background-color: $bottom-bar-bg-color;
@@ -102,117 +69,88 @@
   padding: 20px 0px 20px 0px;
 }
 
-#description {
-  display: inline-block;
-  width: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
-  font-size: 30px;
-}
+#siteContent {
 
-#moreDescription {
-  margin-top: 20px;
-  width: calc(52% + 350px + 20px + 5px);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#moreDescription .block {
-  margin-top: 60px;
-}
-
-#moreDescription .block:after {
-  clear: both;
-  overflow: auto;
-  content: " "; /* 1 */
-  display: table; /* 2 */
-}
-
-#moreDescription #mapText {
-  margin-right: 20px;
-  float: left;
-}
-
-#moreDescription #map {
-  float: left;
-}
-
-#descAndBen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: calc(24cm*0.7);
-}
-
-#moreDescription .bg {
-  background: $theme-color-red;
-  border-radius: 100%;
-  border: 4px solid #EF5350;
-  margin-right: 30px;
-  float: left;
-}
-
-
-
-#moreDescription img {
-  width: 200px;
-}
-
-#siteContent #contact {
-	max-width: 900px;
-	margin-left: auto;
-	margin-right: auto;
-	.content {
-	  max-width: 900px;
-	  margin-left: auto;
-	  margin-right: auto;
-	  border-radius: 15px;
-	  border: 4px solid white;
+	#intro .content {
+	  font-size: 30px;
 	}
-	transition: box-shadow 2s;
+
+	 #contact {
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+		.content {
+		  max-width: 900px;
+		  margin-left: auto;
+		  margin-right: auto;
+		  border-radius: 15px;
+		  border: 4px solid white;
+		}
+		transition: box-shadow 2s;
+		
+		&.highlight {
+			box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+			transition-duration: 0.75s;
+		}
+		
+	}
+
 }
 
 #contacts a {
   color: inherit;
 }
 
-#siteContent #contact.highlight {
-	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-	transition-duration: 0.75s;
-}
 
 .contactFormButton {
 	text-transform: uppercase;
-	background-color: #3a76e5;
+	background: #3a76e5;
   color: #fff;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 	transition: box-shadow 300ms ease;
   border-radius: 3px;
-  border: none;
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: bold;
   padding: 18px;
-  width: auto;
   font-size: 15px;
   cursor: pointer;
-  margin-top: 15px;
 	float: right;
 	display: inline-block;
 	margin-top: 17px;
+	
+	&:hover:not(:active) {
+		background-color: #3367d6;
+	  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+	}
+	&:active {
+		background-color: #2959c0;
+	  box-shadow: 0 0 6px rgba(0,0,0,.16), 0 6px 12px rgba(0,0,0,.32);
+	}
+	
 }
 
-.contactFormButton:hover, .contactFormButton:focus {
-	background-color: #3367d6;
-  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+.ripplelink{
+  position:relative;
+  overflow:hidden;
+	@include transition(all 0.2s ease);
+  z-index:0;
 }
 
-.contactFormButton:active {
-	background-color: #2959c0;
-  box-shadow: 0 0 6px rgba(0,0,0,.16), 0 6px 12px rgba(0,0,0,.32);
+.ink {
+  display: block;
+  position: absolute;
+  background:rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  @include transform(scale(0));
 }
+
+.animate { @include animation(ripple 0.65s linear); }
+
+@-webkit-keyframes ripple { 100% {opacity: 0; -webkit-transform: scale(2.5);} }
+@-moz-keyframes ripple { 100% {opacity: 0; -moz-transform: scale(2.5);} }
+@-o-keyframes ripple { 100% {opacity: 0; -o-transform: scale(2.5);} }
+@keyframes ripple { 100% {opacity: 0; transform: scale(2.5);} }
+
 
 .activateContactForm {
   -webkit-animation-name: activateContactForm; /* Safari 4.0 - 8.0 */
@@ -235,114 +173,26 @@
 
 
 
-#bullets {
+#siteContent #bullets {
   font-size: 30px;
   margin-bottom: 0px;
 	margin-top: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 0.5em;
+	padding: 0 0 0 0.5em;
 	ul {
-		padding: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-		margin-left: 0.8em;
+		padding: 0;
+		margin: 0 0 0 0.8em;
 		li {
-			$margin: 0.6em;
-			margin-top: $margin/2;
-			margin-bottom: $margin/2;
+			margin: 0.3em 0px;
 		}
 	}
 }
 
 
-#popup {
-  position: fixed;
-  width: 50%;
-  height: 50%;
 
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+.mobile { display: none; }
 
-  margin: auto;
-
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0px 0px 2px black;
-  border: 3px solid rgb(150, 150, 150);
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-#popup:not(.open) {
-  display: none;
-}
-
-#popup .title .close-popup {
-  float: right;
-  color: rgb(74, 74, 74);
-}
-
-#popup .title {
-  line-height: 1em;
-  padding: 0.4em 0.4em 0.4em 0;
-  margin: 0 0 0.2em 0;
-  border-bottom: 1px solid gray;
-}
-
-#popupContent {
-  overflow-y: scroll;
-  flex-grow: 1;
-}
-
-#popupBackground {
-  background-color: black;
-	opacity: 0.6;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-	visibility: visible;
-	transition: opacity 800ms;
-}
-
-#popupBackground:not(.open) {
-  opacity: 0;
+#contactFloatingButton {
 	visibility: hidden;
-	transition: visibility 0.8s, opacity 800ms;
-}
-
-@media screen and (min-width: 24cm) {
-	#popupBackground {
-		opacity: 0;
-		visibility: hidden;
-	}
-}
-
-
-@media screen and (max-width: 38cm) {
-  #siteContent {
-    width: 85%;
-  }
-
-  #popup {
-    width: 90%;
-    height: 85%;
-    max-height: 500px;
-    margin-top: 80px;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-}
-
-
-
-.mobile {
-  display: none;
 }
 
 @media screen and (max-width: 24cm) {
@@ -353,13 +203,8 @@
     margin-left: -3px;
   }
 
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: inline-block;
-  }
+  .desktop { display: none; }
+  .mobile { display: inline-block; }
 
   #beforeContactFormButton {
     height: 0px;
@@ -369,99 +214,60 @@
     display: block;
   }
 
-  #siteContent {
-    width: 100%;
-  }
-
-  #siteContent .contentElement h2 {
-      font-size: calc( 20px + 2vw );
-  }
-
-  #siteContent .contentElement .content {
-    font-size: 15px;
-  }
 
   #whiteBar {
     display: none;
   }
 
-  #descAndBen {
-    display: block;
-    min-width: 0;
-    width: auto;
-  }
 
-  #description {
-    width: 100%;
-    display: block;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
-  }
+	#siteContent {
+	  #intro .content {
+	    font-size: 20px;
+	  }
+		#bullets {
+	    font-size: 20px;
+			padding-left: 0.5em;
+	  }
+	}
 
-
-
-  #moreDescription {
-    width: 100%;
-    max-width: 500px;
-  }
-
-
-  #moreDescription .block {
-    margin-top: 40px;
-  }
-
-
-  #benefits {
+  
+	
+	#contactFloatingButton {
+		visibility: visible;
+		width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 40px;
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 60px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    width: 100%;
-    float: none;
-    border: none;
-  }
-
-  #benefits {
-    max-width: 300px;
-  }
-
-
-  #benefits .block {
-    margin: 5%;
-    width: 25%;
-    margin-bottom: 0px;
-  }
-
-  #benefits .block .bg img {
-    width: 100%;
-    max-width: 100px;
-  }
-
-
-
-  #benefits .block h3 {
-    font-size: calc( 8px + 1.6vw );
-    margin-bottom: 0px;
-  }
-
-  #moreDescription .bg {
-    margin-right: 20px;
-  }
-
-  #moreDescription img {
-    width: 80px;
-  }
-
-  #bullets {
-    font-size: 20px;
-		padding-left: 0.5em;
-  }
+    vertical-align: middle;
+    cursor: pointer;
+		transition: bottom 0.4s;
+		@include material-shadow(1);
+		
+		background: #4285f4;
+		&:hover, &:focus {
+			background: #3a76e5;
+		}
+		&:active {
+			background: #3367d6;
+		}
+	}
+	
+	#contactFloatingButton.hidden {
+		bottom: -65px;
+		transition: bottom 0.4s;
+	}
+	
+	#contacts {
+		width: 85%;
+	}
 
 }
-
 
 #benefits :first-child {
   margin-left: 0px;

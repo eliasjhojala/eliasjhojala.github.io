@@ -7,13 +7,13 @@
   display: none;
   position: absolute;
   width: 100%;
-  height: calc(100% - 56px);
+  height: 100%;
   left: 0;
-  top: 56px;
+  top: 0;
   overflow: hidden;
   -ms-touch-action: none;
   touch-action: none;
-  z-index: 1500;
+  z-index: 10000000;
   -webkit-text-size-adjust: 100%;
   /* create separate layer, to avoid paint on window.onscroll in webkit/blink */
   -webkit-backface-visibility: hidden;
