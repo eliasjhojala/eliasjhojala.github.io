@@ -2,9 +2,9 @@
   $photoSwipePath = "PhotoSwipe/";
   $menuBarLinks = array (
     array("intro", "Etusivu"),
-    array("imagesElement", "Laite"),
-    array("bullets", "Miksi"),
-    array("contact", "Haluan laitteen")
+    array("imagesElement", "Laite", "info"),
+    array("bullets", "Miksi", "format-list-bulleted"),
+    array("contact", "Ota yhteyttä", "email")
   );
 
   $teaserUrl = "assets/images/placeHolder.JPG";

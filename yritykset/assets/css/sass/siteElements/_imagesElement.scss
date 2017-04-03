@@ -45,11 +45,11 @@
       display: table; /* 2 */
     }
   }
-}
-
-#imagesElement:after {
-  clear: both;
-  overflow: auto;
-  content: " "; /* 1 */
-  display: table; /* 2 */
+	
+	&:after {
+		clear: both;
+		overflow: auto;
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
 }
