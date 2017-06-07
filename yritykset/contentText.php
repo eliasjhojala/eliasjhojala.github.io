@@ -54,8 +54,7 @@ Ota rohkeasti yhteyttä niin kerromme lisää.
 
 
 $referenceTextList = "
-Laitteen vuokraaminen on vapauttanut resursseja varsinaiseen myyntityöhön.
-Vuokralaitepaikka, yritys x, Pertti Kettunen, yrittäjä.;
+Ensimmäinen oikea referenssiteksti tähän.;
 Asiakkaamme saavat lisäarvoa kun automaatti hoitaa iltamyynnin, joten jotain ostettavaa on aina tarjolla.
 Vuokralaitepaikka, yritys y, Tiina Titityy, esimies.;
 Laitteen vuokraaminen on vapauttanut resursseja varsinaiseen myyntityöhön.
@@ -65,7 +64,7 @@ Vuokralaitepaikka, yritys x, Pertti Kettunen, yrittäjä.
 ";
 
 $referenceImageList = "
-assets/images/placeHolder_2.JPG;
+assets/images/references/img1.jpg;
 assets/images/placeHolder_2.JPG;
 assets/images/placeHolder_2.JPG;
 assets/images/placeHolder_2.JPG
