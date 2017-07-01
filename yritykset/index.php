@@ -7,7 +7,7 @@
     array("contact", "Ota yhteyttä", "email")
   );
 
-  $teaserUrl = "assets/images/placeHolder.JPG";
+  $teaserUrl = "assets/images/header.png";
   $hideWhiteBar = true;
 ?>
 

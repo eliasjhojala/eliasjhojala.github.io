@@ -1,8 +1,8 @@
 <?php
 
 $imageList = "
-assets/images/placeHolder_2.JPG
-assets/images/placeHolder_2.JPG
+assets/images/img_for_box1.jpg
+assets/images/img_for_box2.jpg
 ";
 
 $bulletList = "
