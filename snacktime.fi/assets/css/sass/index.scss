@@ -1,0 +1,39 @@
+@import 'theme';
+@import 'functions';
+@import 'pswp';
+@import 'siteElements/linkbar';
+@import 'siteElements/teaser';
+@import 'siteContent';
+@import 'siteElements/intro';
+@import 'siteElements/references';
+@import 'siteElements/imagesElement';
+@import 'siteElements/bullets';
+@import 'siteElements/contact';
+@import 'siteElements/bottomBar';
+@import 'popup';
+@import 'buttons';
+
+
+a {
+  color: rgb(50, 80, 150);
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+  font-family: 'Roboto';
+  margin: 0px;
+  padding: 0px;
+  background: white;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url(/assets/media/texture.jpg);
+  overflow-x: hidden;
+  background: rgb(245, 245, 245);
+	@media screen and (max-width: 24cm) {
+		font-size: 15px;
+	}
+}

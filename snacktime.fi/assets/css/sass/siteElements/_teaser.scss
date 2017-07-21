@@ -1,0 +1,16 @@
+#teaser {
+	@include material-shadow(1);
+	margin-bottom: 1px;
+	img {
+		margin-bottom: -1px;
+	}
+	#blackBar {
+	  visibility: none;
+		@media screen and (max-width: 24cm) {
+			visibility: visible;
+			height: 56px;
+			width: 100%;
+			background:  $linkbar-bg-color;
+		}
+	}
+}

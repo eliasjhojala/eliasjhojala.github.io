@@ -1,0 +1,15 @@
+<form id="form" method="post" action="email.php"></form>
+
+<template id="form-template">
+  <input name="email" id="email" type="text" placeholder="Lähettäjän sähköpostiosoite">
+  <textarea name="message" id="message" placeholder="Viesti (+ yhteystiedot)" rows="15" cols="40"></textarea>
+  <input id="submit" type="submit" value="LÄHETÄ">
+</template>
+
+<template id="error-template">
+  <span id="error-message" class="notification">Virhe viestin lähetyksessä</span>
+</template>
+
+<template id="success-template">
+  <span id="success-message" class="notification">Lähetetty</span>
+</template>

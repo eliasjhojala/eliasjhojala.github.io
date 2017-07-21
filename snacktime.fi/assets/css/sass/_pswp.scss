@@ -1,0 +1,7 @@
+.my-gallery { width: 100%; }
+.my-gallery figure { display: block; }
+.my-gallery figcaption { display: none; }
+.my-gallery figure .desc {
+  padding: 6px 2px 2px 2px;
+  color: black;
+}

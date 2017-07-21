@@ -1,0 +1,21 @@
+#bottomBar {
+  background-color: $bottom-bar-bg-color;
+  color: $bottom-bar-text-color;
+	@include material-shadow();
+  h2 {
+    padding: 0px; margin: 0px;
+  }
+
+  #contacts {
+    width: 70%;
+    margin: 0px auto 0px auto;
+    padding: 20px 0px 20px 0px;
+    @media screen and (max-width: 24cm) {
+      width: 85%;
+    }
+    a {
+      color: inherit;
+    }
+  }
+  
+}
