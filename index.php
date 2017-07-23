@@ -3,7 +3,7 @@
   $menuBarLinks = array (
     array("intro", "Etusivu"),
     array("tuotteet", "Tuotteet"),
-    array("prosessi", "Miten"),
+    array("prosessi", "Miten?"),
     array("contact", "Ota yhteyttä")
   );
 
