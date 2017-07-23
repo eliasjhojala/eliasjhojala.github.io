@@ -5,22 +5,44 @@
     <div class="content"><?php echo $shortDescription; ?></div>
   </div>
   
-  <div class="contentElement" id="imagesElement">
-    <?php showImages($images2); ?>
+  <div class="contentElement" id="automaatit"> <!-- Automaatit -->
+    <h2>Automaatit</h2>
   </div>
-
-  <div class="contentElement" style="display: flex; justify-content: space-between; flex-wrap: wrap; background: none; box-shadow: none; font-size: 20px; padding: 0px;">
-    <div id="bullets" class="content" style="display: block; width: 45%; background: white; padding: 1.5vw; margin: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><ul style="padding: 30px;">
-      <?php foreach ($bullets as $bullet)
-              if($bullet != "") { echo"<li>".$bullet."</li>"; } ?>
-    </ul></div>
-    <div id="bullets" class="content" style="display: block; width: 45%; background: white; padding: 1.5vw; margin: 0; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><ul style="padding: 30px;">
+  <div class="contentElement" id="imagesElement">
+    <?php showImages($images3); ?>
+  </div>
+  
+  <div class="contentElement automaatitBullets">
+    <div id="bullets" class="content"><ul>
       <?php foreach ($bullets as $bullet)
               if($bullet != "") { echo"<li>".$bullet."</li>"; } ?>
     </ul></div>
   </div>
   
-  <div class="contentElement" id="referenssit">
+  <div class="contentElement" id="kenelle"> <!-- Etsin laitetta ensisijaisesti:  -->
+    <h2>Etsin laitetta ensisijaisesti:</h2>
+  </div>
+  
+  
+  <div class="buttonGrid">
+    <a target="_self" class="button ripplelink" href="packets.php">Yritykselle</a>
+    <a class="button ripplelink" href="http://automaattikouluun.fi">Oppilaitokseen</a>
+    <a class="button ripplelink">Julkishallintoon</a>
+    <a class="button ripplelink" href="#contact">Muualle</a>
+  </div>
+  
+  
+  <div class="contentElement" id="mainTextBox"> <!-- Tuotteet -->
+    <h2><?php echo $longContentSubject2; ?></h2>
+    <div class="content"><?php echo $longContent2; ?></div>
+  </div>
+  
+  <div class="contentElement" id="imagesElement">
+    <?php showImages($images4); ?>
+  </div>
+  
+  
+  <div class="contentElement" id="referenssit"> <!-- Referenssit -->
     <h2>Referenssit</h2>
     <div id="references" class="content my-gallery">
   <?php for ($i = 0; $i < sizeof($referenceTexts); $i++) {
@@ -28,34 +50,6 @@
     </div>
   </div>
   
-  <div class="contentElement">
-    <h2>Automaatit</h2>
-  </div>
-  <div class="contentElement" id="imagesElement">
-    <?php showImages($images3); ?>
-  </div>
-  
-  <div class="contentElement" style="width: 50%; margin-left: auto; margin-right: auto;">
-    <div id="bullets" class="content"><ul>
-      <?php foreach ($bullets as $bullet)
-              if($bullet != "") { echo"<li>".$bullet."</li>"; } ?>
-    </ul></div>
-  </div>
-  
-  
-  <div class="contentElement" id="mainTextBox">
-    <h2><?php echo $longContentSubject2; ?></h2>
-    <div class="content"><?php echo $longContent2; ?></div>
-  </div>
-  
-  <div class="contentElement" id="imagesElement">
-    <?php showImages($images3); ?>
-  </div>
-  
-  <div class="contentElement" id="mainTextBox">
-    <h2><?php echo $longContentSubject3; ?></h2>
-    <div class="content"><?php echo $longContent3; ?></div>
-  </div>
 
   <div class="contentElement" id="contact">
     <h2>Ota yhteyttä</h2>

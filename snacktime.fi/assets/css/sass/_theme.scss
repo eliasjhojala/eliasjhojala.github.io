@@ -39,3 +39,9 @@
     border-radius: 0px;
     box-shadow: none;
   }
+  @mixin material-parent-box() {
+    border-radius: 0px;
+    box-shadow: none;
+    background: none;
+    padding: 0px;
+  }

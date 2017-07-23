@@ -13,4 +13,39 @@
 			background:  $linkbar-bg-color;
 		}
 	}
+	
+	.videoWrapper {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		/*padding-top: 25px;*/
+		height: 0;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+	}
+
+}
+
+#whiteBar {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	color: #d3d3d3;
+	display: block;
+	border-bottom: 1px solid #d3d3d3;
+	
+	span {
+		margin-top: 8px;
+		display: inline-block;
+		border-radius: 100%;
+		border: 1px solid #d3d3d3
+	}
+	
 }

@@ -10,6 +10,11 @@ assets/images/placeHolder_2.JPG
 ";
 
 $imageList3 = "
+assets/images/img_for_box1.jpg
+assets/images/img_for_box2.jpg
+";
+
+$imageList4 = "
 assets/images/placeHolder_2.JPG
 assets/images/placeHolder_2.JPG
 ";
@@ -22,12 +27,14 @@ fdgfddsfd fdgdsf dsgds  ölsdgdg dsg
 sd fdsffsfsdsdf gdsg dg dgdgds hsf
 ";
 
-$shortDescriptionSubject = "Otsikko tähän";
+$shortDescriptionSubject = "SnackTime - Pala Parempaa Päivää";
 
 $shortDescription = "
-Efkbcdjlfbojebfvljbe foeibflbeflcbe clksblcblebfc
-ei oskfbojbeflimn clsj flkeljf cljs flc eli clje roc eli jcljetblgjboer vale
-ock eljfc ke rclej Flickr ero cjjlfc
+Snacktime välipala-automaatilla voit lisätä yrityksesi viihtyvyyttä ja halutessasi hankkia yrityksellesi myös lisätienestiä!<br><br>
+Automaatti on pienikokoinen ja siihen on mahdollista saada lähes mitä vaan lämpimässä säilyviä tuotteita.
+Meiltä löydät varmasti itsellesi sopivan paketin, tarjoamme palveluita sekä yrityksille ja yhdistyksille, että kouluille ja julkishallinnolle.
+<br><br>
+Alempaa voit tutustua tarkemmin automaattiin ja tuotteisiin ja valita sitten parhaiten sinun tarpeitasi vastaavan organisaation.
 ";
 
 $longContentSubject = "Vuokra-automaatti, miksi?";
@@ -108,11 +115,27 @@ $images2 = explode("\n", $imageList2);
 $images2 = array_map(trim, $images2);
 $images3 = explode("\n", $imageList3);
 $images3 = array_map(trim, $images3);
+$images4 = explode("\n", $imageList4);
+$images4 = array_map(trim, $images4);
 $bullets = explode("\n", $bulletList);
 
+
 $images2 = array(
-  array("assets/images/placeHolder_2.JPG", "<h2 style='text-align:left; margin-top: 20px; font-size: 40px;'>Otsikko wide-palvelu 19,90€/kk</h2><br>Tähän kuvaus palvelusta ja sen sisällöstä. Perus jarconit.", ""),
-  array("assets/images/placeHolder_2.JPG", "<h2 style='text-align:left; margin-top: 20px; font-size: 40px;'>Otsikko deal-palvelu 69,90€/kk</h2><br>Tähän kuvaus palvelusta ja sen sisällöstä. Perus jarconit.", "")
+  
+  array("assets/images/wide.png",
+  "<h2>Basic-paketti 19,90€/kk</h2>
+  <br>
+  Snacktime Wide palvelee kattavasti asiakkaita, työntekijöitä ja vieraita tarjoamalla heille laadukkaan välipalapalvelun.
+  Palvelu sopii yrityksille, jotka haluavat laajemman tuotevalikoiman tai useamman maksutavan.
+  Kaikki palvelumaksut tässä palvelupaketissa 0 euroa!", ""),
+  
+  array("assets/images/deal.png",
+  "<h2>Premium-paketti 69,90€/kk</h2>
+  <br>
+  Snacktime Deal sisältää kattavan valikoiman laadukkaita perustuotteita, jotka voit hinnoitella oman mielesi mukaan.
+  Tämä palvelu sopii yrityksille, joiden painopiste on korostaa henkilökunnan työviihtyvyyttä.
+  Laite personoidaan asiakkaan yritysilmeen mukaisesti. Huoltopalveluiden vasteaikatakuu 24 h!", "")
+  
 );
 
 ?>

@@ -89,7 +89,7 @@
   }
 
   
-  #menuBoxIcon {
+  #menuBoxIcon, #backIcon {
     display: none;
     @media screen and (max-width: 24cm) {
       display: inline-block;

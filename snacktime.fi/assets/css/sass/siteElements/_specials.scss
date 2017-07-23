@@ -1,0 +1,81 @@
+#siteContent {
+
+  .palveluBullets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 20px;
+    @include material-parent-box();
+    #bullets {
+      display: block;
+      width: 45%;
+      background: white;
+      padding: 1.5vw;
+      margin: 0;
+      @include material();
+    }
+    @media screen and (max-width: 24cm) {
+      margin: 4%;
+      ul {
+        padding: 30px;
+      }
+      #bullets {
+        word-wrap: break-word;
+        font-size: 14px;
+        padding: 1.3vw;
+        ul {
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 10px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  .palveluBulletsLarge {
+    font-size: 20px;
+    @media screen and (max-width: 24cm) {
+      margin: 4%;
+      ul {
+        padding: 30px;
+      }
+      #bullets {
+        word-wrap: break-word;
+        font-size: 14px;
+        padding: 1.3vw;
+        ul {
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 10px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  .automaatitBullets {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 24cm) {
+      width: 90%;
+      #bullets {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .palveluImages {
+    h2 {
+      text-align:left;
+      margin-top: 20px;
+      font-size: 40px;
+      @media screen and (max-width: 24cm) {
+        margin-top: 10px;
+        font-size: 24px;
+      }
+    }
+  }
+  
+}

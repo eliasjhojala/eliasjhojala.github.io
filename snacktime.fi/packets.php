@@ -2,8 +2,8 @@
   $photoSwipePath = "PhotoSwipe/";
   $menuBarLinks = array (
     array("intro", "Etusivu"),
-    array("automaatit", "Laite", "info"),
-    array("kenelle", "Kenelle"),
+    array("imagesElement", "Laite", "info"),
+    array("bullets", "Miksi", "format-list-bulleted"),
     array("contact", "Ota yhteyttä", "email")
   );
 
@@ -20,11 +20,11 @@
   <body>
     <?php
       include $photoSwipePath.'begin.php';
-      include 'linkbar.php'; //Vähän content edittii
-      include 'teaser.php'; //Vähän content edittii
+      include 'linkbar_subpage.php'; //Vähän content edittii?>
+      <a id="whiteBar"  class="material-icons" href="#intro"><span>keyboard_arrow_down</span></a><?php
       include 'contentText.php'; //Tekstit
-      include 'sitecontent.php'; //Sisältö muuttuu erityisesti tässä!
-      include 'bottombar.php'; //Tää pysyy aika samana
+      include 'sitecontent_packets.php'; //Sisältö muuttuu erityisesti tässä!
+      include 'bottombar_subpage.php'; //Tää pysyy aika samana
       include 'popup.php'; //Ei tarvitse muuttaa
       include $photoSwipePath.'end.php';
     ?>

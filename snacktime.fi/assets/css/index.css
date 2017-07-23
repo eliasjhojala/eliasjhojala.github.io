@@ -81,10 +81,10 @@
         font-size: 15px;
         font-weight: 600;
         font-family: 'Roboto', 'Helvetica Neue'; } }
-  #linkbar #menuBoxIcon {
+  #linkbar #menuBoxIcon, #linkbar #backIcon {
     display: none; }
     @media screen and (max-width: 24cm) {
-      #linkbar #menuBoxIcon {
+      #linkbar #menuBoxIcon, #linkbar #backIcon {
         display: inline-block;
         height: 100%;
         font-size: 28px;
@@ -117,6 +117,32 @@
         height: 56px;
         width: 100%;
         background: #F44336; } }
+  #teaser .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    /*padding-top: 25px;*/
+    height: 0; }
+    #teaser .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
+#whiteBar {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 40px;
+  color: #d3d3d3;
+  display: block;
+  border-bottom: 1px solid #d3d3d3; }
+  #whiteBar span {
+    margin-top: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid #d3d3d3; }
 
 #siteContent {
   width: 75%;
@@ -423,6 +449,71 @@
     #bottomBar #contacts a {
       color: inherit; }
 
+#siteContent .palveluBullets {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 20px;
+  border-radius: 0px;
+  box-shadow: none;
+  background: none;
+  padding: 0px; }
+  #siteContent .palveluBullets #bullets {
+    display: block;
+    width: 45%;
+    background: white;
+    padding: 1.5vw;
+    margin: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  @media screen and (max-width: 24cm) {
+    #siteContent .palveluBullets {
+      margin: 4%; }
+      #siteContent .palveluBullets ul {
+        padding: 30px; }
+      #siteContent .palveluBullets #bullets {
+        word-wrap: break-word;
+        font-size: 14px;
+        padding: 1.3vw; }
+        #siteContent .palveluBullets #bullets ul {
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 10px;
+          padding-right: 5px; } }
+#siteContent .palveluBulletsLarge {
+  font-size: 20px; }
+  @media screen and (max-width: 24cm) {
+    #siteContent .palveluBulletsLarge {
+      margin: 4%; }
+      #siteContent .palveluBulletsLarge ul {
+        padding: 30px; }
+      #siteContent .palveluBulletsLarge #bullets {
+        word-wrap: break-word;
+        font-size: 14px;
+        padding: 1.3vw; }
+        #siteContent .palveluBulletsLarge #bullets ul {
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 10px;
+          padding-right: 5px; } }
+#siteContent .automaatitBullets {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-width: 24cm) {
+    #siteContent .automaatitBullets {
+      width: 90%; }
+      #siteContent .automaatitBullets #bullets {
+        font-size: 16px; } }
+#siteContent .palveluImages h2 {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 40px; }
+  @media screen and (max-width: 24cm) {
+    #siteContent .palveluImages h2 {
+      margin-top: 10px;
+      font-size: 24px; } }
+
 #popup {
   position: fixed;
   width: 50%;
@@ -500,6 +591,12 @@
   float: right;
   display: inline-block;
   margin-top: 17px; }
+  .contactFormButton:hover:not(:active) {
+    background-color: #3367d6;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28); }
+  .contactFormButton:active {
+    background-color: #2959c0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32); }
   .contactFormButton:hover:not(:active) {
     background-color: #3367d6;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28); }
@@ -598,6 +695,48 @@
   100% {
     opacity: 0;
     transform: scale(2.5); } }
+.buttonGrid {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  @media screen and (max-width: 24cm) {
+    .buttonGrid {
+      width: 370px;
+      max-width: 100%; } }
+  .buttonGrid .button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    background: #3a76e5;
+    color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    transition: box-shadow 300ms ease;
+    border-radius: 3px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    padding: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 200px;
+    text-align: center; }
+    .buttonGrid .button:hover:not(:active) {
+      background-color: #3367d6;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28); }
+    .buttonGrid .button:active {
+      background-color: #2959c0;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32); }
+    @media screen and (max-width: 24cm) {
+      .buttonGrid .button {
+        font-size: 15px;
+        padding: 14px;
+        width: 150px; } }
+
 a {
   color: #325096;
   text-decoration: none;
