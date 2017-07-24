@@ -1,4 +1,4 @@
 
 *.map
-
 *.scssc
+*.sass-cache/
