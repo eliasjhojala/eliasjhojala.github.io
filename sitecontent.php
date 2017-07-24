@@ -9,22 +9,17 @@
           Vaikka tuotteet eivät olekaan täysiä aterioita, pelastavat ne monesti kiireisen koulupäivän,
           sillä pienikin välipala auttaa tehokkaasti nälkään ja sen avulla jaksaa opiskella oppituntien loppuun asti!
         </div>
-
+        
         <div id="benefits">
-          <div class="block">
-            <div class="bg"><img src="assets/images/benefits_icons/easy.png"></div>
-            <h3>Helppoa</h3>
-          </div>
-
-          <div class="block">
-            <div class="bg"><img src="assets/images/benefits_icons/cheap.png"></div>
-            <h3>Edullista</h3>
-          </div>
-
-          <div class="block">
-            <div class="bg"><img src="assets/images/benefits_icons/ecological.png"></div>
-            <h3>Ekologista</h3>
-          </div>
+        
+        <?php
+          foreach($benefitBlocks as $block) { ?>
+            <div class="block">
+              <div class="bg"><img src="assets/images/benefits_icons/<?php echo $block[1]; ?>"></div>
+              <h3><?php echo $block[0]; ?></h3>
+            </div>
+        <?php  } ?>
+        
         </div>
 
       </div>
@@ -53,74 +48,27 @@
   <div class="contentElement" id="prosessi">
     <h2>Näin hankit välipala-automaatin koulullesi</h2>
     <div class="content">
-
       <div id="progress">
-        <div class="block imageLeft">
-
+      <?php
+        for($i = 0; $i < sizeof($progressBlocks); $i++) {
+          $class = ifEven($i, "imageLeft", "imageRight");
+          $title = $i + 1 . ". " . $progressBlocks[$i][0];
+          $content = $progressBlocks[$i][1];
+          $img = "assets/images/progress_icons/".$progressBlocks[$i][2];
+      ?>
+      
+        <div class="block <?php echo $class; ?>">
           <div class="imageBg">
-            <img src="assets/images/progress_icons/contact.png">
+            <img src="<?php echo $img; ?>">
           </div>
-
           <div class="text">
-            <h3>1. Ota yhteyttä</h3>
-            Laita viestiä ja kerro mitä haluaisit.
-            Katsotaan yhdessä miten voimme auttaa.
+            <h3><?php echo $title; ?></h3>
+            <?php echo $content; ?>
           </div>
-
-
         </div>
-
-        <div class="block imageRight">
-
-          <div class="imageBg">
-            <img src="assets/images/progress_icons/list.png">
-          </div>
-
-          <div class="text" id="tuotteet">
-            <h3>2. Tuotteiden valinta</h3>
-            Räätälöidään mieleisenne kahdentoista tuotteen tuotepaketti valmiiksi.
-            Valikoimasta löytyy paljon terveellisiä ja maukkaita välipaloja, joista voitte valita.
-           <b>Tuote-esitteen löydät <a onClick="track('Content', 'Tuote-esite (linkki)');" href="assets/files/esite.pdf">täältä</a></b>.
-          </div>
-
-
-        </div>
-
-        <div class="block imageLeft">
-
-          <div class="imageBg">
-            <img src="assets/images/progress_icons/rector.png">
-          </div>
-
-          <div class="text">
-            <h3>3. Rehtori puhutteluun</h3>
-            Ollaan yhteydessä koulunne rehtoriin ja esitellään hänelle välipala-automaatti -idea,
-            sekä siihen tuleva tuotevalikoima. Jos ekalla kerralla ei tärppää, muutetaan valikoimaa ja yritetään uudestaan,
-            kunnes rehtorikin alkaa nähdä hyvän päälle.
-          </div>
-
-
-        </div>
-
-        <div class="block imageRight">
-
-          <div class="imageBg">
-            <img src="assets/images/progress_icons/pen.png">
-          </div>
-
-          <div class="text">
-            <h3>4. Nimet paperiin</h3>
-            Tehdään kirjallinen sopimus välipala-automaatista,
-            jonka jälkeen SnackTime asentaa automaatin paikoilleen
-            ja koko koulu voi alkaa nauttia voimaannuttavista välipaloista.
-          </div>
-
-
-        </div>
-
-
+          
+      <?php } ?>
       </div>
-
     </div>
   </div>
 
